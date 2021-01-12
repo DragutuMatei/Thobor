@@ -19,16 +19,26 @@ function Login() {
     }
   };
 
-    const submitLogin = () => {
-    if (document.querySelector("#email").value === "" || document.querySelector("#email").value === "") {
+  const submitLogin = () => {
+    if (
+      document.querySelector("#email").value === "" ||
+      document.querySelector("#email").value === ""
+    ) {
       alert("Toate campurile sunt obligatorii");
     } else {
-      Axios.post(port + "/login", {
-        email: document.querySelector("#email").value,
-        passwordLogin: document.querySelector("#pas").value,
-      }).then((resp) => {
+      Axios.post(
+        port + "/login",
+        {
+          email: document.querySelector("#email").value,
+          passwordLogin: document.querySelector("#pas").value,
+        },
+        { headers: { "Access-Control-Allow-Origin": "*" } }
+      ).then((resp) => {
         if (resp.data.ok === true) {
-          window.localStorage.setItem("email", document.querySelector("#email").value);
+          window.localStorage.setItem(
+            "email",
+            document.querySelector("#email").value
+          );
           window.location.pathname = "/";
         } else {
           alert(resp.data.msg);
@@ -146,8 +156,8 @@ function Login() {
               </header>
               <section className="main-content">
                 <div className="form">
-                                  <input
-                                      id="email"
+                  <input
+                    id="email"
                     type="email"
                     placeholder="Email"
                     onInput={(e) => {
@@ -156,8 +166,8 @@ function Login() {
                   />
                   <div className="line"></div>
                   <input
-                                      type="password"
-                                      id="pas"
+                    type="password"
+                    id="pas"
                     placeholder="Password"
                     onInput={(e) => {
                       setPasswordLogin(e.target.value);
