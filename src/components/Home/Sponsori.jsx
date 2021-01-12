@@ -7,8 +7,8 @@ function Sponsori() {
 
   useEffect(() => {
     Axios.get(port + "/admin/getSponsori").then((res) => {
-//       setSponsori(res.data);
-        console.log(res.data);
+      setSponsori(res.data);
+//         console.log(res.data);
      });
   }, []);
 
