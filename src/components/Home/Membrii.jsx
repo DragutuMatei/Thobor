@@ -10,7 +10,8 @@ function Membrii(props) {
 
   useEffect(() => {
     Axios.get(port + "/admin/getMembers").then((res) => {
-      setMembrii(res.data);
+//       setMembrii(res.data);
+      console.log(res.data);
     });
   }, []);
 
