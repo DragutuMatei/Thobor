@@ -70,7 +70,7 @@ function Premii() {
             </Slider>
             <div className="dots">
               {premii.map((d) => (
-                <Dot className="dot" slide={d.id} key={d.id} />
+                <Dot className="dot" slide={d.id - 1} key={d.id} />
               ))}
             </div>
             {/* <ButtonBack className="back">
