@@ -18,33 +18,44 @@ function AddMembru() {
       data.append("poza", poza);
 
       fetch("/proces", {
-        method: 'POST',
+        method: "POST",
         body: poza,
       }).then((response) => {
-        console.log(response)
+        console.log(response);
       });
-      
-    //   axios
-    //     .post(port + "/admin/InsertMember", data, {
-    //       headers: {
-    //         "Content-Type": "multipart/form-data",
-    //       },
-    //     })
-    //     .then((res) => {
-    //       if (res.data.ok) {
-    //         setOk(true);
-    //       }
-    //     });
+
+      //   axios
+      //     .post(port + "/admin/InsertMember", data, {
+      //       headers: {
+      //         "Content-Type": "multipart/form-data",
+      //       },
+      //     })
+      //     .then((res) => {
+      //       if (res.data.ok) {
+      //         setOk(true);
+      //       }
+      //     });
     }
   };
 
   return (
     <>
       <div className="addMembru">
+        <button
+          onClick={() => {
+            fetch("https://thoborsite.netlify.app/nusj.php", {
+              method: "POST",
+            }).then((res) => {
+              console.log("sad");
+            });
+          }}
+        >
+          asdasdasdsa
+        </button>
 
         <form action="nusj.php" method="post">
           <input type="file" name="" id="" />
-          
+
           <button type="submit">apsa</button>
         </form>
         {/* <div className="row">
