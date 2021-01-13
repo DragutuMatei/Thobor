@@ -14,23 +14,30 @@ function Posts({ posts, ok }) {
         const link = "/blog/" + b.titlu;
         return (
           <>
-            <Link to={link} key={Math.random()}>
-              <img
-                src={require("../../assets/blog/" + b.thumbnail).default}
-                alt=""
-              />
-              <h1>{b.titlu}</h1>
-            </Link>
-
-            {ok && (
-              <button
-                key={Math.random() * Math.random()}
-                onClick={() => {
-                  delet(b.id, b.thumbnail, b.imag);
-                }}
-              >
-                Delete
-              </button>
+            {ok ? (
+              <div className="a" to={link} key={Math.random()}>
+                <img
+                  src={require("../../assets/blog/" + b.thumbnail).default}
+                  alt=""
+                />
+                <h1>{b.titlu}</h1>
+                <button
+                  key={Math.random() * Math.random()}
+                  onClick={() => {
+                    delet(b.id, b.thumbnail, b.imag);
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
+            ) : (
+              <Link to={link} className="a" key={Math.random()}>
+                <img
+                  src={require("../../assets/blog/" + b.thumbnail).default}
+                  alt=""
+                />
+                <h1>{b.titlu}</h1>
+              </Link>
             )}
           </>
         );
