@@ -15,12 +15,14 @@ function Posts({ posts, ok }) {
         return (
           <>
             {ok ? (
-              <div className="a" to={link} key={Math.random()}>
-                <img
-                  src={require("../../assets/blog/" + b.thumbnail).default}
-                  alt=""
-                />
-                <h1>{b.titlu}</h1>
+              <div className="a" key={Math.random()}>
+                <Link to={link}>
+                  <img
+                    src={require("../../assets/blog/" + b.thumbnail).default}
+                    alt=""
+                  />
+                  <h1>{b.titlu}</h1>
+                </Link>
                 <button
                   key={Math.random() * Math.random()}
                   onClick={() => {
