@@ -44,6 +44,7 @@ function AddMembru() {
 
         <form action="nusj.php" method="post">
           <input type="file" name="" id="" />
+          
           <button type="submit">apsa</button>
         </form>
         {/* <div className="row">
