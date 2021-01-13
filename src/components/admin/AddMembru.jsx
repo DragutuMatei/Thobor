@@ -16,17 +16,25 @@ function AddMembru() {
       data.append("name", name);
       data.append("departament", departament);
       data.append("poza", poza);
-      axios
-        .post(port + "/admin/InsertMember", data, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        })
-        .then((res) => {
-          if (res.data.ok) {
-            setOk(true);
-          }
-        });
+
+      fetch("/proces", {
+        method: 'POST',
+        body: poza,
+      }).then((response) => {
+        console.log(response)
+      });
+      
+    //   axios
+    //     .post(port + "/admin/InsertMember", data, {
+    //       headers: {
+    //         "Content-Type": "multipart/form-data",
+    //       },
+    //     })
+    //     .then((res) => {
+    //       if (res.data.ok) {
+    //         setOk(true);
+    //       }
+    //     });
     }
   };
 

@@ -1,6 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react"; 
 import port from "../components/Port";
 import Pagination from "../components/blog/Pagination";
 import Posts from "../components/blog/Posts";

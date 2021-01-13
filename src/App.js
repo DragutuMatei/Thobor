@@ -36,6 +36,7 @@ function App() {
           <Route path="/login" exact component={Login} />
           <Route path="/blog/:titlu" exact component={BlogPost} />
           <Route path="/galerie/:sezon" exact component={GaleriePoze} />
+          <Route path="/proces" exact component={} />
 
           {admin ? (
             <Route
