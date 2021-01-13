@@ -41,7 +41,12 @@ function AddMembru() {
   return (
     <>
       <div className="addMembru">
-        <div className="row">
+
+        <form action="nusj.php" method="post">
+          <input type="file" name="" id="" />
+          <button type="submit">apsa</button>
+        </form>
+        {/* <div className="row">
           <h1>name</h1>
           <input
             type="text"
@@ -70,7 +75,7 @@ function AddMembru() {
           />
         </div>
         <button onClick={submit}>Submit</button>
-        {ok && <h1>Gata</h1>}
+        {ok && <h1>Gata</h1>} */}
       </div>
     </>
   );
