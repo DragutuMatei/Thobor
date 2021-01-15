@@ -66,17 +66,17 @@ function AddPost() {
       data.append("month", month);
       data.append("year", year);
 
-      console.log(numePoze);
+      console.log(numePoze.slice(0, -1).split(";"));
       console.log(poze);
-      // Axios.post(port + "/admin/addPost", data, {
-      //   headers: {
-      //     "Content-Type": "multipart/form-data",
-      //   },
-      // }).then((res) => {
-      //   if (res.data.ok) {
-      //     setOk(true);
-      //   }
-      // });
+      Axios.post(port + "/admin/addPost", data, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }).then((res) => {
+        if (res.data.ok) {
+          setOk(true);
+        }
+      });
     }
   };
 
