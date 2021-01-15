@@ -34,10 +34,9 @@ function AddMembru() {
           },
         })
         .then((res) => {
-          console.log(res);
-          // if (res.data.ok) {
-          // setOk(true);
-          // }
+          if (res.data.ok) {
+          setOk(true);
+          }
         });
     }
   };

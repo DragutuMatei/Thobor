@@ -5,13 +5,22 @@ import port from "../Port";
 function AddPost() {
   const [titlu, setTitlu] = useState("");
   const [descriere, setDescriere] = useState("");
-  const [thumbnail, setThumbnail] = useState([]);
+  const [thumbnail, setThumbnail] = useState("");
+  const [thumbnailName, setThumbnailName] = useState([]);
   const [poze, setPoze] = useState([]);
   const [numePoze, setNumePoze] = useState("");
   const [day, setDay] = useState("");
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
   const [ok, setOk] = useState(false);
+
+  const editThumbnail = (file) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      setThumbnail(reader.result);
+    };
+  };
 
   const Nume = (a) => {
     let n = "";
@@ -44,6 +53,7 @@ function AddPost() {
       data.append("titlu", titlu);
       data.append("descriere", descriere);
       data.append("thumbnail", thumbnail);
+      data.append("thumbnailName", thumbnailName);
       for (let i = 0; i < poze.length; i++) {
         data.append("poze", poze[i]);
       }
@@ -88,7 +98,8 @@ function AddPost() {
         <input
           type="file"
           onChange={(e) => {
-            setThumbnail(e.target.files[0]);
+            setThumbnail(e.target.files[0].name);
+            editThumbnail(e.target.files[0]);
           }}
         />
       </div>

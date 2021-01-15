@@ -37,7 +37,6 @@ function Membrii(props) {
             <div key={membru.id} className="membru">
               <img
                 src={membru.poza}
-                // src={require("../../assets/membrii/" + membru.poza).default}
                 alt=""
               />
               <h2>{membru.name}</h2>
