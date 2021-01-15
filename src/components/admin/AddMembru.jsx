@@ -34,6 +34,7 @@ function AddMembru() {
           },
         })
         .then((res) => {
+          console.log(res);
           if (res.data.ok) {
             setOk(true);
           }
