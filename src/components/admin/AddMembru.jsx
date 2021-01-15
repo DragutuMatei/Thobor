@@ -48,6 +48,7 @@ function AddMembru() {
           <h1>name</h1>
           <input
             type="text"
+            name="Asdas"
             onChange={(e) => {
               setName(e.target.value);
             }}
