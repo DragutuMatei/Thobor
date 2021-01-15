@@ -40,8 +40,7 @@ function AddPost() {
         n.push(reader.result);
       };
     }
-    console.log(n);
-    // setPoze(n);
+    setPoze(n);
   };
 
   const submit = () => {
@@ -67,15 +66,16 @@ function AddPost() {
       data.append("month", month);
       data.append("year", year);
 
-      Axios.post(port + "/admin/addPost", data, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      }).then((res) => {
-        if (res.data.ok) {
-          setOk(true);
-        }
-      });
+      console.log(numePoze);
+      // Axios.post(port + "/admin/addPost", data, {
+      //   headers: {
+      //     "Content-Type": "multipart/form-data",
+      //   },
+      // }).then((res) => {
+      //   if (res.data.ok) {
+      //     setOk(true);
+      //   }
+      // });
     }
   };
 
