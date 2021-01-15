@@ -6,7 +6,16 @@ function AddMembru() {
   const [name, setName] = useState("");
   const [departament, setDepartament] = useState("");
   const [poza, setPoza] = useState();
+  const [pozaName, setPozaName] = useState("");
   const [ok, setOk] = useState(false);
+
+  const editFile = (file) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      setPoza(reader.result);
+    }
+  }
 
   const submit = () => {
     if (name === "" || departament === "" || poza === []) {
@@ -16,7 +25,8 @@ function AddMembru() {
       data.append("name", name);
       data.append("departament", departament);
       data.append("poza", poza);
-
+      data.append("pozaName", pozaName);
+        
       axios
         .post(port + "/admin/InsertMember", data, {
           headers: {
@@ -58,7 +68,8 @@ function AddMembru() {
           <input
             type="file"
             onChange={(e) => {
-              setPoza(e.target.files[0]);
+              setPozaName(e.target.files[0].name);
+              editFile(e.target.files[0]);
             }}
           />
         </div>
