@@ -11,7 +11,6 @@ function Membrii(props) {
   useEffect(() => {
     Axios.get(port + "/admin/getMembers").then((res) => {
       setMembrii(res.data);
-      //       console.log(res.data);
     });
   }, []);
 
@@ -35,10 +34,7 @@ function Membrii(props) {
         <div className="membrii">
           {membrii.map((membru) => (
             <div key={membru.id} className="membru">
-              <img
-                src={membru.poza}
-                alt=""
-              />
+              <img src={membru.poza} alt="" />
               <h2>{membru.name}</h2>
               {membru.departament.split(",").map((dep) => (
                 <h5 key={membru.id + Math.random()}>{dep}</h5>

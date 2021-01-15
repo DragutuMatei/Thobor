@@ -18,7 +18,8 @@ function Posts({ posts, ok }) {
               <div className="a" key={Math.random()}>
                 <Link to={link}>
                   <img
-                    src={require("../../assets/blog/" + b.thumbnail).default}
+                    src={b.thumbnail}
+                    // src={require("../../assets/blog/" + b.thumbnail).default}
                     alt=""
                   />
                   <h1>{b.titlu}</h1>
