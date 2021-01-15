@@ -67,6 +67,7 @@ function AddPost() {
       data.append("year", year);
 
       console.log(numePoze);
+      console.log(poze);
       // Axios.post(port + "/admin/addPost", data, {
       //   headers: {
       //     "Content-Type": "multipart/form-data",
