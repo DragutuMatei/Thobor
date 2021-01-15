@@ -33,8 +33,8 @@ function AddPost() {
 
   const file = (a) => {
     let n = [];
-    const reader = new FileReader();
     for (let i = 0; i < a.length; i++) {
+      const reader = new FileReader();
       reader.readAsDataURL(a[i]);
       reader.onload = () => {
         n.push(reader.result);
