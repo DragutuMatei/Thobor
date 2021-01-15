@@ -33,10 +33,16 @@ function AddPost() {
 
   const file = (a) => {
     let n = [];
+    const reader = new FileReader();
     for (let i = 0; i < a.length; i++) {
-      n.push(a[i]);
+      // n.push(a[i]);
+      reader.readAsDataURL(a[i]);
+      reader.onload(
+        n.push(reader.result)
+      )
     }
-    setPoze(n);
+    console.log(n);
+    // setPoze(n);
   };
 
   const submit = () => {
