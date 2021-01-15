@@ -16,9 +16,9 @@ function Admin() {
       setPost(res.data);
     });
   }, [
-    axios.get(port + "/getBlogPosts").then((res) => {
-      return res.data;
-    }),
+    // axios.get(port + "/getBlogPosts").then((res) => {
+    //   return res.data;
+    // }),
   ]);
 
   if (localStorage.getItem("email") !== user.email) {
