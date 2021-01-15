@@ -36,9 +36,11 @@ function AddPost() {
     const reader = new FileReader();
     for (let i = 0; i < a.length; i++) {
       // n.push(a[i]);
+      console.log(a[i]);
+      console.log(reader);
       reader.readAsDataURL(a[i]);
       reader.onload(
-        n.push(reader.result)
+        // n.push(reader.result)
       )
     }
     console.log(n);
