@@ -36,7 +36,8 @@ function Membrii(props) {
           {membrii.map((membru) => (
             <div key={membru.id} className="membru">
               <img
-                src={require("../../assets/membrii/" + membru.poza).default}
+                src={membru.poza}
+                // src={require("../../assets/membrii/" + membru.poza).default}
                 alt=""
               />
               <h2>{membru.name}</h2>
