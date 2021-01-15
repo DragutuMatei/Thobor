@@ -14,8 +14,8 @@ function AddMembru() {
     reader.readAsDataURL(file);
     reader.onload = () => {
       setPoza(reader.result);
-    }
-  }
+    };
+  };
 
   const submit = () => {
     if (name === "" || departament === "" || poza === []) {
@@ -26,7 +26,7 @@ function AddMembru() {
       data.append("departament", departament);
       data.append("poza", poza);
       data.append("pozaName", pozaName);
-        
+
       axios
         .post(port + "/admin/InsertMember", data, {
           headers: {
@@ -45,7 +45,7 @@ function AddMembru() {
     <>
       <div className="addMembru">
         <div className="row">
-          <h1>name</h1>
+          <h1 className="sadasd">name</h1>
           <input
             type="text"
             name="Asdas"
