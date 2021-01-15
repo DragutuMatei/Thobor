@@ -86,6 +86,7 @@ function AddPost() {
         <h2>Titlu</h2>
         <textarea
           type="text"
+          className="nush"
           onChange={(e) => {
             setTitlu(e.target.value);
           }}
