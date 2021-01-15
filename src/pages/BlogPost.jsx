@@ -47,7 +47,8 @@ function BlogPost({ match }) {
             {img.map((i) => (
               <img
                 key={Math.random()}
-                src={require("../assets/blog/" + i).default}
+                src={i}
+                // src={require("../assets/blog/" + i).default}
               />
             ))}
           </div>
