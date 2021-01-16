@@ -20,8 +20,8 @@ function GaleriePoze({ match }) {
           .split(";")
           .map((i) => (
             <img
-              style={{width:300}}
-              src={require("../assets/galerie/" + i).default}
+              style={{ width: 300 }}
+              src={i}
               key={Math.random()}
             />
           ))
