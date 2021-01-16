@@ -930,13 +930,14 @@ $brand-primary: #17aa4b;
   align-items: center;
 
   .pag {
-    padding: 10px;
+    padding: 5px 10px;
     background: #17aa4b;
     color: white;
     font-size: 30px;
     cursor: pointer;
     margin-right: 15px;
-    transition: 0.5 ease-in;
+    transition: 0.5s ease-in;
+    border-radius: 5px;
 
     &:hover {
       background: #000000;
