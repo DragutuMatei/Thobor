@@ -210,7 +210,7 @@ html {
   }
 
   .post {
-    width: 70vw;
+    width: 75vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -1220,6 +1220,12 @@ $brand-primary: #17aa4b;
       padding: 0;
       width: 90vw;
     }
+  }
+}
+
+@media screen and (max-width: 450px){
+  .fullPage .post{
+    width: 85vw;
   }
 }
 

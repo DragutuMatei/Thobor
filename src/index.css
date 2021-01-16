@@ -286,7 +286,7 @@ html {
 }
 
 .fullPage .post {
-  width: 70vw;
+  width: 75vw;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1603,6 +1603,12 @@ html {
   .despre .s {
     padding: 0;
     width: 90vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .fullPage .post {
+    width: 85vw;
   }
 }
 
