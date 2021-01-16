@@ -1319,6 +1319,50 @@ html {
   width: 100%;
 }
 
+.galerie {
+  width: 90vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.galerie a {
+  margin-bottom: 30px;
+  padding: 50px 10%;
+  background: #17aa4b;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.galerie a h1 {
+  font-size: 80px;
+  font-weight: 500;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  font-family: "Work Sans", sans-serif;
+  color: white;
+}
+
+.galerie a:hover {
+  background: #131313;
+}
+
+.galerie a:hover h1 {
+  color: #17aa4b;
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
   .wrapper {
     margin: 0 10px !important;

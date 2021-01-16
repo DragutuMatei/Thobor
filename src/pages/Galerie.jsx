@@ -10,18 +10,30 @@ function Galerie() {
   useEffect(() => {
     axios.get(port + "/admin/getGalerieSezoane").then((res) => {
       setSezoane(res.data);
-    })
+    });
   }, []);
-
-
 
   return (
     <>
+      <div
+        style={{ width: "100vw", height: "100px", position: "relative" }}
+      ></div>
       <Header
         title="Galerie"
         img={require("../assets/despre/despre.png").default}
       />
-      <GalerieSezoane sez={sezoane} /> 
+      <div className="galerie">
+        {/* <GalerieSezoane sez={sezoane} /> */}
+        <a href="">
+          <h1>sezon 1</h1>
+        </a>
+        <a href="">
+          <h1>sezon 1</h1>
+        </a>
+        <a href="">
+          <h1>sezon 1</h1>
+        </a>
+      </div>
     </>
   );
 }

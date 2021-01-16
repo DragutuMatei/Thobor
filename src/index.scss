@@ -953,6 +953,38 @@ $brand-primary: #17aa4b;
   }
 }
 
+.galerie{ 
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  a{
+    margin-bottom: 30px;
+    padding: 50px 10%;
+    background: #17aa4b;
+    transition: 0.2s ease-in-out;
+
+    h1{
+      font-size: 80px;
+      font-weight: 500;
+      transition: 0.2s ease-in-out;
+      font-family: "Work Sans", sans-serif;
+      color: white;
+    }
+
+    &:hover{
+      background: #131313;
+      h1{
+        color: #17aa4b;
+      }
+    }
+  }
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
   .wrapper {
     margin: 0 10px !important;
