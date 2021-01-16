@@ -921,6 +921,22 @@ $brand-primary: #17aa4b;
   }
 }
 
+.pagination{
+  width: auto;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .pag{
+    padding: 10px;
+    background: #17aa4b;
+    color: white;
+    font-size: 30px0;
+  }
+}
+
 .posts {
   max-width: 1000px;
   min-height: 50vh;
