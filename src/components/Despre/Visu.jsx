@@ -10,7 +10,7 @@ function Visu() {
           <h1>Visul nostru</h1>
           <p>
             Echipa THOBOR a Colegiului Național “Calistrat Hogaş” Tecuci, este
-            formată din optsprezece liceeni si doi mentori care au îndrăznit să
+            formată din șaisprezece liceeni si doi mentori care au îndrăznit să
             viseze. Plecată dintr-o zonă fără tradiții în domeniu, echipa și-a
             propus să aducă în comunitate o idee nouă, care să-i inspire pe toți
             colegii, care să deschidă noi direcții de evoluție pentru copii.
