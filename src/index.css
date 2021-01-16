@@ -1289,7 +1289,8 @@ html {
   padding: 10px;
   background: #17aa4b;
   color: white;
-  font-size: 30px0;
+  font-size: 30px;
+  margin: 15px;
 }
 
 .posts {
