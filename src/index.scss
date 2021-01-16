@@ -6,7 +6,7 @@
   font-size: 20px;
   user-select: none;
   scroll-behavior: smooth;
-  
+
   p {
     text-indent: 30px;
   }
@@ -257,9 +257,9 @@ html {
       white-space: pre-wrap;
       text-align: center;
       line-height: 1.5;
-      color:#7a7a7a;
+      color: #7a7a7a;
     }
-    .fle{
+    .fle {
       margin: 50px 0;
       width: 100%;
       display: flex;
@@ -267,8 +267,8 @@ html {
       justify-content: space-around;
       align-items: baseline;
       flex-wrap: wrap;
-      
-      img{
+
+      img {
         width: 300px;
         height: auto;
       }
@@ -921,7 +921,7 @@ $brand-primary: #17aa4b;
   }
 }
 
-.pagination{
+.pagination {
   width: auto;
   margin: 20px auto;
   display: flex;
@@ -929,13 +929,23 @@ $brand-primary: #17aa4b;
   justify-content: center;
   align-items: center;
 
-  .pag{
+  .pag {
     padding: 10px;
     background: #17aa4b;
     color: white;
     font-size: 30px;
     cursor: pointer;
-    margin: 15px;
+    margin-right: 15px;
+    transition: 0.5 ease-in;
+
+    &:hover {
+      background: #000000;
+      color: #17aa4b;
+    }
+
+    &:last-of-type() {
+      margin: 0;
+    }
   }
 }
 
@@ -971,7 +981,7 @@ $brand-primary: #17aa4b;
   }
 }
 
-.galerie{ 
+.galerie {
   width: 90vw;
   margin: 0 auto;
   display: flex;
@@ -980,13 +990,13 @@ $brand-primary: #17aa4b;
   justify-content: space-around;
   align-items: flex-start;
 
-  a{
+  a {
     margin-bottom: 30px;
     padding: 50px 10%;
     background: #17aa4b;
     transition: 0.2s ease-in-out;
 
-    h1{
+    h1 {
       font-size: 80px;
       font-weight: 500;
       transition: 0.2s ease-in-out;
@@ -994,9 +1004,9 @@ $brand-primary: #17aa4b;
       color: white;
     }
 
-    &:hover{
+    &:hover {
       background: #131313;
-      h1{
+      h1 {
         color: #17aa4b;
       }
     }
@@ -1211,29 +1221,29 @@ $brand-primary: #17aa4b;
   }
 }
 
-@media screen and (max-width:360px){
-  .fullPage .txt{
+@media screen and (max-width: 360px) {
+  .fullPage .txt {
     font-size: 18px;
   }
 }
 
-
 .animate {
   animation-name: land;
-    margin-top: 20px;
-    animation-duration: 2s;
+  margin-top: 20px;
+  animation-duration: 2s;
 }
 
-.an{
+.an {
   animation-name: stay;
-  animation-duration: 2s;margin-top: 70px;
+  animation-duration: 2s;
+  margin-top: 70px;
 }
 
-@keyframes stay{
-  from{
+@keyframes stay {
+  from {
     margin-top: 0;
   }
-  to{
+  to {
     margin-top: 70px;
   }
 }

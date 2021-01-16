@@ -1291,7 +1291,18 @@ html {
   color: white;
   font-size: 30px;
   cursor: pointer;
-  margin: 15px;
+  margin-right: 15px;
+  -webkit-transition: 0.5 ease-in;
+  transition: 0.5 ease-in;
+}
+
+.pagination .pag:hover {
+  background: #000000;
+  color: #17aa4b;
+}
+
+.pagination .pag:last-of-type() {
+  margin: 0;
 }
 
 .posts {
