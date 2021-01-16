@@ -837,21 +837,37 @@ $brand-primary: #17aa4b;
       border-radius: 20px;
       width: 350px;
       z-index: 1;
+
       header {
-        margin-bottom: 40px;
-        .logo {
-          width: 85px;
-          height: 85px;
-          border-radius: 50px;
-          background-color: #17aa4b;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          span {
-            font-size: 18px;
-            color: #fff;
-          }
+        width: 100vw;
+        height: 42vh;
+        position: relative;
+        margin-bottom: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+          width: 90vw;
+          height: 100%;
+          object-fit: cover;
+          object-position: right;
         }
+
+        // .logo {
+        //   width: 85px;
+        //   height: 85px;
+        //   border-radius: 50px;
+        //   background-color: #17aa4b;
+        //   display: flex;
+        //   justify-content: center;
+        //   align-items: center;
+        //   span {
+        //     font-size: 18px;
+        //     color: #fff;
+        //   }
+        // }
+
         h1 {
           color: #17aa4b;
           font-size: 35px;

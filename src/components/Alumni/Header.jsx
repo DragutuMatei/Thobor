@@ -1,25 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Header({ title, img }) {
   return (
-    <div
-      className="header"
-      style={{
-        width: "100vw",
-        height: "500px",
-        position: "relative",
-        marginBottom: 100,
-      }}
-    >
-      <img
-        src={img}
-        alt=""
-        style={{
-          width: "100%",
-          height: "500px",
-          objectFit: "contain",
-        }}
-      />
+    <div className="header">
+      <img src={img} alt="" />
+
       <h1
         style={{
           position: "absolute",
