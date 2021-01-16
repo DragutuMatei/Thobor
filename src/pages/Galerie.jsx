@@ -23,16 +23,7 @@ function Galerie() {
         img={require("../assets/despre/despre.png").default}
       />
       <div className="galerie">
-        {/* <GalerieSezoane sez={sezoane} /> */}
-        <a href="">
-          <h1>sezon 1</h1>
-        </a>
-        <a href="">
-          <h1>sezon 1</h1>
-        </a>
-        <a href="">
-          <h1>sezon 1</h1>
-        </a>
+        <GalerieSezoane sez={sezoane} />
       </div>
     </>
   );
