@@ -2,8 +2,24 @@ import React from "react";
 
 function Header({ title, img }) {
   return (
-    <div className="header">
-      <img src={img} alt="" />
+    <div className="header" style={{ width: "100vw",
+      height: "42vh",      position: "relative",
+      marginBottom: "100px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center"
+    }}>
+      
+      <img
+        src={img}
+        alt=""
+        style={{
+          width: "90vw",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "right",
+        }}
+      />
 
       <h1
         style={{

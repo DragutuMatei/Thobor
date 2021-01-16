@@ -1146,10 +1146,14 @@ html {
 }
 
 .log .container .wrapper header {
-  width: 100vw;
-  height: 42vh;
-  position: relative;
-  margin-bottom: 100;
+  margin-bottom: 40px;
+}
+
+.log .container .wrapper header .logo {
+  width: 85px;
+  height: 85px;
+  border-radius: 50px;
+  background-color: #17aa4b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1161,13 +1165,9 @@ html {
           align-items: center;
 }
 
-.log .container .wrapper header img {
-  width: 90vw;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: right;
-     object-position: right;
+.log .container .wrapper header .logo span {
+  font-size: 18px;
+  color: #fff;
 }
 
 .log .container .wrapper header h1 {
