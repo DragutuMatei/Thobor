@@ -1290,6 +1290,7 @@ html {
   background: #17aa4b;
   color: white;
   font-size: 30px;
+  cursor: pointer;
   margin: 15px;
 }
 
