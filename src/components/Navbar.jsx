@@ -201,16 +201,16 @@ export default function Navabar() {
               </div>
             )}
             <div className="link">
-              <a to="https://www.facebook.com/ThoborCNCH" target="_blank">
+              <a href="https://www.facebook.com/ThoborCNCH" target="_blank">
                 <i className="fab fa-facebook-f"></i>
               </a>
               <a
-                to="https://www.youtube.com/channel/UCoUzT42Ce6f_11ICDef3svA"
+                href="https://www.youtube.com/channel/UCoUzT42Ce6f_11ICDef3svA"
                 target="_blank"
               >
                 <i className="fab fa-youtube"></i>
               </a>
-              <a to="https://www.instagram.com/thoborcnch/" target="_blank">
+              <a href="https://www.instagram.com/thoborcnch/" target="_blank">
                 <i className="fab fa-instagram"></i>
               </a>
             </div>
