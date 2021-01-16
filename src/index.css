@@ -1551,6 +1551,7 @@ html {
   }
   .contact .contactForm {
     width: 90vw;
+    padding: 15px;
     right: 0;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
