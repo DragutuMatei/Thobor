@@ -1268,7 +1268,7 @@ html {
 }
 
 .posts {
-  min-width: 1000px;
+  max-width: 1000px;
   min-height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -922,7 +922,7 @@ $brand-primary: #17aa4b;
 }
 
 .posts {
-  min-width: 1000px;
+  max-width: 1000px;
   min-height: 50vh;
   display: flex;
   flex-direction: row;
