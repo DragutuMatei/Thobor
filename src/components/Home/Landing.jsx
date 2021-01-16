@@ -6,11 +6,8 @@ function Landing() {
 
   return (
     <>
-      <div className="fullPage displayFle0x ">
-        <div
-          style={{ width: "100vw", height: "70px", position: "relative" }}
-        ></div>
-        <div className="txt displayFlex animate" data-aos="fade-up">
+      <div className="fullPage displayFlex" style={{justifyContent:'flex-start'}}>
+        <div className="txt animate" data-aos="fade-up">
           <h1 data-aos="fade-up">NOI SUNTEM THOBOR</h1>
           <p data-aos={"fade-left"}>
             Echipa de robotică, formată din 15 liceeni ai Colegiului Național
@@ -20,7 +17,7 @@ function Landing() {
             care să deschidă noi direcții de evoluție pentru copii.
           </p>
         </div>
-        <div className="imag">
+        <div className="imag an">
           <img
             src={require("../../assets/firstBackgroundHome.png").default}
             alt=""

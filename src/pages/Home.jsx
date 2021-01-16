@@ -10,6 +10,9 @@ import Sponsori from "../components/Home/Sponsori";
 function Home() {
   return (
     <>
+      <div
+        style={{ width: "100vw", height: "70px", position: "relative" }}
+      ></div>
       <Landing />
       <Stem />
       <Contact />

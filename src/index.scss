@@ -106,10 +106,14 @@ html {
   .txt {
     width: 60vw;
     text-align: center;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // position: absolute;
+    // top: 40%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
 
     h1 {
       font-weight: 700;
@@ -129,8 +133,6 @@ html {
     }
   }
   .imag {
-    position: absolute;
-    top: 65vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -1092,7 +1094,7 @@ $brand-primary: #17aa4b;
     .imag {
       top: 600px;
       img {
-        width: 800px;
+        width: 100vw;
       }
     }
   }
@@ -1158,18 +1160,40 @@ $brand-primary: #17aa4b;
   }
 }
 
+@media screen and (max-width:360px){
+  .fullPage .txt{
+    font-size: 18px;
+  }
+}
+
+
 .animate {
   animation-name: land;
-  animation-duration: 2s;
+    margin-top: 20px;
+    animation-duration: 2s;
+}
+
+.an{
+  animation-name: stay;
+  animation-duration: 2s;margin-top: 70px;
+}
+
+@keyframes stay{
+  from{
+    margin-top: 0;
+  }
+  to{
+    margin-top: 70px;
+  }
 }
 
 @keyframes land {
   from {
     opacity: 0;
-    margin-top: 70px;
+    margin-top: 90px;
   }
   to {
     opacity: 1;
-    margin-top: 0;
+    margin-top: 20px;
   }
 }
