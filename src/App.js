@@ -12,6 +12,7 @@ import Admin from "./pages/Admin";
 import user from "./components/admin/adminUser";
 import BlogPost from "./pages/BlogPost";
 import GaleriePoze from "./pages/GaleriePoze";
+import Footer from "./components/Footer";
 
 function App() {
   const [admin, setAdmin] = useState(false);
@@ -45,6 +46,7 @@ function App() {
             />
           ) : null}
         </Switch>
+        <Footer/>
       </Router>
     </>
   );
