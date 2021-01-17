@@ -1243,6 +1243,10 @@ $brand-primary: #17aa4b;
       width: 95%;
     }
   }
+  .footer{
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media screen and( max-width: 600px) {
