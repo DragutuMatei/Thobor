@@ -37,7 +37,7 @@ function Footer() {
           </div>
         </div>
         <div className="center">
-          <h1>Postari Recenter</h1>
+          <h1>Postari Recente</h1>
           {postari.map((p) => (
             <Link to={"/blog/" + p.titlu}>{p.titlu}</Link>
           ))}
