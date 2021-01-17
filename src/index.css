@@ -1391,6 +1391,7 @@ html {
 .gal img {
   max-width: 50vw;
   height: auto;
+  margin-bottom: 50px;
 }
 
 .footer {
