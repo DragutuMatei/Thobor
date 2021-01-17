@@ -905,11 +905,13 @@ $brand-primary: #17aa4b;
           cursor: pointer;
         }
       }
+
       footer {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         margin-top: 60px;
+
         p {
           margin: 0;
           font-weight: 100;
@@ -1002,9 +1004,10 @@ $brand-primary: #17aa4b;
   div{
     margin: 20px;
   }
+
   .left {
     width: 300px;
-    height: 150px;
+    height: auto;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -1034,7 +1037,7 @@ $brand-primary: #17aa4b;
     display: flex;
     flex-direction: column;
     width: 360px;
-    height: 250px;
+    height: auto;
     justify-content: space-around;
 
     h1 {
@@ -1049,6 +1052,7 @@ $brand-primary: #17aa4b;
       color: #4b4b4b;
       font-family: "Raleway", sans-serif;
       margin: 10px 0;
+      margin-bottom: 25px;
     }
   }
 }

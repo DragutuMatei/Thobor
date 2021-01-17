@@ -1391,7 +1391,7 @@ html {
 
 .footer .left {
   width: 300px;
-  height: 150px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1439,7 +1439,7 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 360px;
-  height: 250px;
+  height: auto;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -1456,6 +1456,7 @@ html {
   color: #4b4b4b;
   font-family: "Raleway", sans-serif;
   margin: 10px 0;
+  margin-bottom: 25px;
 }
 
 .galerie {
