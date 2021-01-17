@@ -42,6 +42,7 @@ function BlogPost({ match }) {
     form.append("postare", match.params.titlu);
     form.append("coment", coment);
     axios.post(port + "/addComent", form).then((res) => {
+      console.log(res.data);
       setComments(res.data);
     });
   };
@@ -60,6 +61,7 @@ function BlogPost({ match }) {
       });
     axios.post(port + "/getCom", { tit: match.params.titlu }).then((res) => {
       setComments(res.data);
+      console.log(res.data);
     });
   }, []);
 
