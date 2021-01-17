@@ -4,13 +4,7 @@ import { Link } from "react-router-dom";
 import port from "./Port";
 
 function Footer() {
-  const [postari, setPostari] = useState([
-    "România prin lentila roboticii💙💛❤️!!",
-    "La mulți ani, România!",
-    "⚠️REZULTATE RECRUTARE MEMBRII ȘI VOLUNTARI⚠️",
-    "Ziua educației",
-    "Fereastră către Știință",
-  ]);
+  const [postari, setPostari] = useState([]);
 
   useEffect(() => {
     axios.get(port + "/footer").then((r) => {
