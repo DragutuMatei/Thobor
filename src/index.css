@@ -416,7 +416,7 @@ html {
 }
 
 .fullPage .post .coment .add input {
-  width: 360px;
+  width: 320px;
   border: #17aa4b 2px solid;
   padding: 15px 20px;
   font-size: 25px;
@@ -1802,6 +1802,22 @@ html {
 }
 
 @media screen and (max-width: 950px) {
+  .fullPage .post .coment {
+    width: 100%;
+  }
+  .fullPage .post .coment .add {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .fullPage .post .coment .add button {
+    margin: 10px;
+  }
   .fullPage .txt h1 {
     font-size: 40px;
   }
@@ -1872,7 +1888,7 @@ html {
 
 @media screen and (max-width: 450px) {
   .fullPage .post {
-    width: 85vw;
+    width: 95vw;
   }
 }
 

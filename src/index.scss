@@ -295,7 +295,7 @@ html {
         margin: 20px 0;
 
         input {
-          width: 360px;
+          width: 320px;
           border: #17aa4b 2px solid;
           padding: 15px 20px;
           font-size: 25px;
@@ -304,7 +304,7 @@ html {
           outline: none;
           color: #131313;
 
-          &:focus{
+          &:focus {
             border: #8cc640 2px solid;
           }
         }
@@ -321,7 +321,7 @@ html {
           cursor: pointer;
           transition: 0.2s ease-out;
 
-          &:hover{
+          &:hover {
             background: #17aa4b;
             border-radius: 5px;
           }
@@ -347,7 +347,7 @@ html {
               font-weight: 700;
               color: #4b4b4b;
               margin-bottom: 5px;
-              &::first-letter{
+              &::first-letter {
                 text-transform: uppercase;
               }
             }
@@ -359,10 +359,10 @@ html {
               font-weight: 500;
             }
           }
-          .c{
+          .c {
             width: 100%;
-            p{
-              &::first-letter{
+            p {
+              &::first-letter {
                 text-transform: uppercase;
               }
               font-size: 20px;
@@ -1336,6 +1336,18 @@ $brand-primary: #17aa4b;
 
 @media screen and (max-width: 950px) {
   .fullPage {
+    .post .coment {
+      width: 100%;
+      .add {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        button {
+          margin: 10px;
+        }
+      }
+    }
+
     .txt {
       h1 {
         font-size: 40px;
@@ -1420,7 +1432,7 @@ $brand-primary: #17aa4b;
 
 @media screen and (max-width: 450px) {
   .fullPage .post {
-    width: 85vw;
+    width: 95vw;
   }
 }
 
