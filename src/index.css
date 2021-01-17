@@ -1367,6 +1367,32 @@ html {
   margin: 10px 0;
 }
 
+.gal {
+  width: 95vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.gal img {
+  max-width: 50vw;
+  height: auto;
+}
+
 .footer {
   width: 100vw;
   min-height: 400px;

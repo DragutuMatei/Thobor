@@ -993,13 +993,29 @@ $brand-primary: #17aa4b;
   margin: 10px 0;
 }
 
+.gal{
+  width: 95vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  justify-self: center;
+  align-self: center;
+
+  img{
+    max-width: 50vw;
+    height: auto;
+  }
+}
+
 .footer {
   width: 100vw;
   min-height: 400px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  
+
   align-items: center;
   margin-top: 50px;
 

@@ -15,17 +15,20 @@ function GaleriePoze({ match }) {
 
   return (
     <>
-      {img.map((im) =>
-        im.img
-          .split(";")
-          .map((i) => (
-            <img
-              style={{ width: 300 }}
-              src={i}
-              key={Math.random()}
-            />
-          ))
-      )}
+      <div
+        style={{ width: "100vw", height: "100px", position: "relative" }}
+      ></div>
+      <div className="fullPage displayFlex">
+        <div className="gal">
+          {img.map((im) =>
+            im.img
+              .split(";")
+              .map((i) => (
+                <img style={{ width: 300 }} src={i} key={Math.random()} />
+              ))
+          )}
+        </div>
+      </div>
     </>
   );
 }
