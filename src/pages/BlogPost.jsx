@@ -42,7 +42,12 @@ function BlogPost({ match }) {
     form.append("postare", match.params.titlu);
     form.append("coment", coment);
     axios.post(port + "/addComent", form).then((res) => {
-      console.log(res.data);
+      setComments(res.data);
+    });
+  };
+
+  const Delete = (id, postare) => {
+    axios.post(port + "/admin/deleteCom", { id: id, postare:postare }).then((res) => {
       setComments(res.data);
     });
   };
@@ -61,7 +66,6 @@ function BlogPost({ match }) {
       });
     axios.post(port + "/getCom", { tit: match.params.titlu }).then((res) => {
       setComments(res.data);
-      console.log(res.data);
     });
   }, []);
 
@@ -117,6 +121,16 @@ function BlogPost({ match }) {
                   <div className="c">
                     <p>{com.coment}</p>
                   </div>
+                  {window.localStorage.getItem("email") ===
+                    "thoborcnch@gmail.com" && (
+                    <button
+                      onClick={() => {
+                        Delete(com.id, com.postare);
+                      }}
+                    >
+                      Delete
+                    </button>
+                  )}
                 </div>
               ))}
             </div>
