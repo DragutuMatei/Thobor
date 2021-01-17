@@ -378,6 +378,133 @@ html {
   margin-bottom: 40px;
 }
 
+.fullPage .post .coment {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+}
+
+.fullPage .post .coment .add {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+
+.fullPage .post .coment .add input {
+  width: 360px;
+  border: #17aa4b 2px solid;
+  padding: 15px 20px;
+  font-size: 25px;
+  font-family: "Work Sans", sans-serif;
+  border-radius: 5px;
+  outline: none;
+  color: #131313;
+}
+
+.fullPage .post .coment .add input:focus {
+  border: #8cc640 2px solid;
+}
+
+.fullPage .post .coment .add button {
+  width: 200px;
+  height: 60px;
+  background: #8cc640;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-family: "Work Sans", sans-serif;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.fullPage .post .coment .add button:hover {
+  background: #17aa4b;
+  border-radius: 5px;
+}
+
+.fullPage .post .coment .coments {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.fullPage .post .coment .coments .comen {
+  margin: 20px 0;
+  min-height: 100px;
+}
+
+.fullPage .post .coment .coments .comen .up h3 {
+  font-size: 30px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  color: #4b4b4b;
+  margin-bottom: 5px;
+}
+
+.fullPage .post .coment .coments .comen .up h3::first-letter {
+  text-transform: uppercase;
+}
+
+.fullPage .post .coment .coments .comen .up h6 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-family: "Roboto", sans-serif;
+  color: #131313;
+  font-weight: 500;
+}
+
+.fullPage .post .coment .coments .comen .c {
+  width: 100%;
+}
+
+.fullPage .post .coment .coments .comen .c p {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.fullPage .post .coment .coments .comen .c p::first-letter {
+  text-transform: uppercase;
+}
+
 .displayFlex {
   display: -webkit-box;
   display: -ms-flexbox;
