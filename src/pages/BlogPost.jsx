@@ -80,6 +80,7 @@ function BlogPost({ match }) {
     axios.post(port + "/addComent", form).then((res) => {
       setComments(res.data);
     });
+    document.querySelector("#add").value = "";
   };
 
   const Delete = (id, postare) => {
@@ -137,6 +138,7 @@ function BlogPost({ match }) {
                   <input
                     type="text"
                     placeholder="Scrie un comentariu"
+                    id="add"
                     onChange={(e) => {
                       setComment(e.target.value);
                     }}
