@@ -1369,7 +1369,7 @@ html {
 
 .footer {
   width: 100vw;
-  min-height: 500px;
+  min-height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
