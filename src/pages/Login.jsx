@@ -7,7 +7,6 @@ function Login() {
   const [name, setName] = useState("");
   const [emailLogin, setEmailLogin] = useState("");
   const [passwordLogin, setPasswordLogin] = useState("");
-  const [file, setfile] = useState("");
   const [emailReg, setEmailReg] = useState([]);
   const [passwordReg, setPasswordReg] = useState("");
 
@@ -19,8 +18,11 @@ function Login() {
     }
   };
 
-    const submitLogin = () => {
-    if (document.querySelector("#email").value === "" || document.querySelector("#email").value === "") {
+  const submitLogin = () => {
+    if (
+      document.querySelector("#email").value === "" ||
+      document.querySelector("#email").value === ""
+    ) {
       alert("Toate campurile sunt obligatorii");
     } else {
       Axios.post(port + "/login", {
@@ -28,7 +30,10 @@ function Login() {
         passwordLogin: document.querySelector("#pas").value,
       }).then((resp) => {
         if (resp.data.ok === true) {
-          window.localStorage.setItem("email", document.querySelector("#email").value);
+          window.localStorage.setItem(
+            "email",
+            document.querySelector("#email").value
+          );
           window.location.pathname = "/";
         } else {
           alert(resp.data.msg);
@@ -38,13 +43,12 @@ function Login() {
   };
 
   const submitRegister = () => {
-    if (emailReg === "" || passwordReg === "" || name === "" || file === []) {
+    if (emailReg === "" || passwordReg === "" || name === "") {
       alert("Toate campurile sunt obligatorii");
     } else {
       const data = new FormData();
       data.append("name", name);
       data.append("email", emailReg);
-      data.append("file", file);
       data.append("password", passwordReg);
       Axios.post(port + "/register", data, {
         headers: {
@@ -146,8 +150,8 @@ function Login() {
               </header>
               <section className="main-content">
                 <div className="form">
-                                  <input
-                                      id="email"
+                  <input
+                    id="email"
                     type="email"
                     placeholder="Email"
                     onInput={(e) => {
@@ -156,8 +160,8 @@ function Login() {
                   />
                   <div className="line"></div>
                   <input
-                                      type="password"
-                                      id="pas"
+                    type="password"
+                    id="pas"
                     placeholder="Password"
                     onInput={(e) => {
                       setPasswordLogin(e.target.value);
@@ -194,14 +198,6 @@ function Login() {
                     placeholder="Email"
                     onChange={(e) => {
                       setEmailReg(e.target.value);
-                    }}
-                  />
-                  <div className="line"></div>
-                  <input
-                    type="file"
-                    name="file"
-                    onChange={(e) => {
-                      setfile(e.target.files[0]);
                     }}
                   />
                   <div className="line"></div>
