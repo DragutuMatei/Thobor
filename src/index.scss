@@ -996,9 +996,12 @@ $brand-primary: #17aa4b;
   min-height: 500px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
 
+  div{
+    margin: 20px;
+  }
   .left {
     width: 300px;
     height: 150px;
