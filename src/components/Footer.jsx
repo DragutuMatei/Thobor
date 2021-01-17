@@ -42,6 +42,7 @@ function Footer() {
             <Link to={"/blog/" + p.titlu}>{p.titlu}</Link>
           ))}
         </div>
+        <div className="right"></div>
       </div>
       <h4 className="bottom">
         THOBOR | Echipa de robotică a Colegiului Național “Calistrat Hogaș”
