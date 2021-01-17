@@ -165,7 +165,7 @@ export default function Navabar() {
             </div>
             <div className="link">
               <a
-                href="#contacte"
+                href="/#contacte"
                 style={{ color: contact }}
                 onClick={() => {
                   col("contact");
