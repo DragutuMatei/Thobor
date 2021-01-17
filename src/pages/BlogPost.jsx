@@ -10,6 +10,41 @@ function BlogPost({ match }) {
   const [day, setDay] = useState("");
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
+  const [coments, setComments] = useState([]);
+  const [coment, setComment] = useState("");
+
+  const MonthArr = [
+    "Ianuarie",
+    "Februarie",
+    "Martie",
+    "Aprilie",
+    "Mai",
+    "Iunie",
+    "Iulie",
+    "August",
+    "Septembrie",
+    "Noiembrie",
+    "Octombrie",
+    "Decembrie",
+  ];
+
+  const addComent = () => {
+    const email = window.localStorage.getItem("email");
+    const today = new Date();
+    const ora = today.getHours() + ":" + today.getMinutes();
+    const month = MonthArr[today.getMonth()];
+    const zi = today.getDate();
+    const data = "Postat pe " + zi + " " + month + " la " + ora;
+
+    const form = new FormData();
+    form.append("email", email);
+    form.append("data", data);
+    form.append("postare", match.params.titlu);
+    form.append("coment", coment);
+    axios.post(port + "/addComent", form).then((res) => {
+      setComments(res.data);
+    });
+  };
 
   useEffect(() => {
     axios
@@ -23,6 +58,9 @@ function BlogPost({ match }) {
         setMonth(res.data[0].month.trim());
         setYear(res.data[0].year);
       });
+    axios.post(port + "/getCom", { tit: match.params.titlu }).then((res) => {
+      setComments(res.data);
+    });
   }, []);
 
   return (
@@ -45,12 +83,41 @@ function BlogPost({ match }) {
           <div className="descr">{desc}</div>
           <div className="fle">
             {img.map((i) => (
-              <img
-                key={Math.random()}
-                src={i}
-                // src={require("../assets/blog/" + i).default}
-              />
+              <img key={Math.random()} src={i} />
             ))}
+          </div>
+          <div className="coment">
+            <div className="add">
+              {window.localStorage.getItem("email") ? (
+                <>
+                  <input
+                    type="text"
+                    placeholder="Scrie un comentariu"
+                    onChange={(e) => {
+                      setComment(e.target.value);
+                    }}
+                  />
+                  <button onClick={addComent}>Adaugă</button>
+                </>
+              ) : (
+                <>
+                  <h1>Loghează-te ca să scri un comentariu!</h1>
+                </>
+              )}
+            </div>
+            <div className="coments">
+              {coments.map((com) => (
+                <div className="comen">
+                  <div className="up">
+                    <h3>{com.nume}</h3>
+                    <h6> {com.data}</h6>
+                  </div>
+                  <div className="c">
+                    <p>{com.coment}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
