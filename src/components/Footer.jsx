@@ -8,7 +8,8 @@ function Footer() {
 
   useEffect(() => {
     axios.get(port + "/footer").then((r) => {
-      setPostari(r.data);
+    //   setPostari(r.data);
+        console.log(r);
     });
   }, []);
 
