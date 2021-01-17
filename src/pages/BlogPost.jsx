@@ -10,43 +10,7 @@ function BlogPost({ match }) {
   const [day, setDay] = useState("");
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
-  const [coments, setComments] = useState([
-    {
-      nume: "dumnezeu",
-      data: "Postat pe 17 Ianuarie la 21:43",
-      coment:
-        "lorem lorem lorem lorem fjdkfbaskjgbf gukdsg sdogusg sduig sidug ius ifgs",
-      postare: "test",
-    },
-    {
-      nume: "dumnezeu",
-      data: "Postat pe 17 Ianuarie la 21:43",
-      coment:
-        "lorem lorem lorem lorem fjdkfbaskjgbf gukdsg sdogusg sduig sidug ius ifgs",
-      postare: "test",
-    },
-    {
-      nume: "dumnezeu",
-      data: "Postat pe 17 Ianuarie la 21:43",
-      coment:
-        "lorem lorem lorem lorem fjdkfbaskjgbf gukdsg sdogusg sduig sidug ius ifgs",
-      postare: "test",
-    },
-    {
-      nume: "dumnezeu",
-      data: "Postat pe 17 Ianuarie la 21:43",
-      coment:
-        "lorem lorem lorem lorem fjdkfbaskjgbf gukdsg sdogusg sduig sidug ius ifgs",
-      postare: "test",
-    },
-    {
-      nume: "dumnezeu",
-      data: "Postat pe 17 Ianuarie la 21:43",
-      coment:
-        "lorem lorem lorem lorem fjdkfbaskjgbf gukdsg sdogusg sduig sidug ius ifgs",
-      postare: "test",
-    },
-  ]);
+  const [coments, setComments] = useState([]);
   const [coment, setComment] = useState("");
 
   const MonthArr = [
