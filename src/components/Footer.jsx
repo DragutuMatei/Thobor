@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import port from "./Port";
 
 function Footer() {
@@ -44,7 +45,7 @@ function Footer() {
         <div className="center">
           <h1>Postari Recenter</h1>
           {postari.map((p) => (
-            <a href={"/blog/" + p}>{p}</a>
+            <Link to={"/blog/" + p}>{p}</Link>
           ))}
         </div>
       </div>
