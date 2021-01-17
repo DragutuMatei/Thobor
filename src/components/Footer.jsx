@@ -44,7 +44,7 @@ function Footer() {
         <div className="center">
           <h1>Postari Recenter</h1>
           {postari.map((p) => (
-            <a href={p}>{p}</a>
+            <a href={"/blog/" + p}>{p}</a>
           ))}
         </div>
       </div>
