@@ -8,8 +8,7 @@ function Footer() {
 
   useEffect(() => {
     axios.get(port + "/footer").then((r) => {
-    //   setPostari(r.data);
-        console.log(r);
+      setPostari(r.data);
     });
   }, []);
 
@@ -40,7 +39,7 @@ function Footer() {
         <div className="center">
           <h1>Postari Recenter</h1>
           {postari.map((p) => (
-            <Link to={"/blog/" + p}>{p}</Link>
+            <Link to={"/blog/" + p.titlu}>{p.titlu}</Link>
           ))}
         </div>
       </div>
