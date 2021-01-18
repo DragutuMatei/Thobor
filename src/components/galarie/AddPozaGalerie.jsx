@@ -8,6 +8,7 @@ function AddPozaGalerie() {
   const [pozeNume, setPozeNume] = useState("");
   const [sezon, setSezon] = useState("");
   const [sezonP, setSezonP] = useState("");
+  const [ok, setOk] = useState(false);
 
   const Nume = (a) => {
     let n = "";
@@ -65,44 +66,101 @@ function AddPozaGalerie() {
         headers: {
           "Content-Type": "multipart/form-data",
         },
+      }).then((res) => {
+        if (res.data.ok) {
+          setOk(true);
+        }
       });
     }
   };
 
   return (
     <>
-      <select
-        id="sezon"
-        onChange={(e) => {
-          setSezonP(e.target.value);
-        }}
-      >
-        <option value="any">Any</option>
-        {options.map((r) => (
-          <option value={r.sezoane}>{r.sezoane}</option>
-        ))}
-      </select>
-
-      <div className="row">
-        <input
-          type="text"
+      <div style={{ padding: "0 50px" }}>
+        <select
+          class="form-control form-control-lg"
+          id="sezon"
           onChange={(e) => {
-            setSezon(e.target.value);
+            setSezonP(e.target.value);
           }}
-        />
-        <button onClick={addSezon}>Add sezon</button>
-      </div>
-
-      <div className="row">
+        >
+          <option value="any">Any</option>
+          {options.map((r) => (
+            <option value={r.sezoane}>{r.sezoane}</option>
+          ))}
+        </select>
+        <div class="custom-file">
         <input
-          type="file"
-          multiple
+          class="custom-file-input"
+          id="validatedCustomFile"
+            type="file"
+            multiple
+            onChange={(e) => {
+              file(e.target.files);
+              Nume(e.target.files);
+            }}
+          />
+        <label class="custom-file-label" for="validatedCustomFile">
+          Choose file...
+        </label>
+        <small id="emailHelp" class="form-text text-muted">
+          Mai multe poze
+        </small>
+        <div class="invalid-feedback">Idk</div>
+        </div>
+        <button type="submit" class="btn btn-primary m-2" onClick={addPozeG}>
+        Submit
+      </button>
+      {ok && <h1>Gata</h1>}
+        
+        <div class="form-group">
+          <label for="exampleInputEmail1">Titlu</label>
+          <input
+            className="form-control"
+            type="text"
+            onChange={(e) => {
+              setSezon(e.target.value);
+            }}
+          />
+          <button type="submit" class="btn btn-primary m-2" onClick={addSezon}>
+            Add sezon
+          </button>
+        </div>
+
+        
+        {/* <select
+          id="sezon"
           onChange={(e) => {
-            file(e.target.files);
-            Nume(e.target.files);
+            setSezonP(e.target.value);
           }}
-        />
-        <button onClick={addPozeG}>Add Poze Galerie</button>
+        >
+          <option value="any">Any</option>
+          {options.map((r) => (
+            <option value={r.sezoane}>{r.sezoane}</option>
+          ))}
+        </select>
+
+        <div className="row">
+          <input
+            type="text"
+            onChange={(e) => {
+              setSezon(e.target.value);
+            }}
+          />
+          <button onClick={addSezon}>Add sezon</button>
+        </div>
+
+        <div className="row">
+          <input
+            type="file"
+            multiple
+            onChange={(e) => {
+              file(e.target.files);
+              Nume(e.target.files);
+            }}
+          />
+          <button onClick={addPozeG}>Add Poze Galerie</button> */}
+        {/* </div> */}
       </div>
     </>
   );
