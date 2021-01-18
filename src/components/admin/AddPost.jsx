@@ -13,6 +13,9 @@ function AddPost() {
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
   const [ok, setOk] = useState(false);
+  
+
+
 
   const editThumbnail = (file) => {
     const reader = new FileReader();
@@ -63,8 +66,8 @@ function AddPost() {
       }
       data.append("numePoze", numePoze);
       data.append("day", day);
-      data.append("month", month);
       data.append("year", year);
+      data.append("month", month);
 
       console.log(numePoze.slice(0, -1).split(";"));
       console.log(poze);
@@ -102,7 +105,7 @@ function AddPost() {
         ></textarea>
         <small id="emailHelp" class="form-text text-muted"></small>
       </div>
-
+          <h1>Thumbnail</h1>
       <div class="custom-file">
         <input
           type="file"
@@ -144,7 +147,7 @@ function AddPost() {
           }}
         />
         <small id="emailHelp" class="form-text text-muted">
-          Se scrie luna complet
+          Se scrie luna complet in romana si cu litera mare
         </small>
       </div>
 
@@ -162,6 +165,7 @@ function AddPost() {
         </small>
       </div>
 
+      <h1>Poze</h1>
       <div class="custom-file">
         <input
           type="file"
