@@ -122,7 +122,7 @@ function AddPozaGalerie() {
         {ok && <h1>Gata</h1>}
 
         <div class="form-group">
-          <label for="exampleInputEmail1">Titlu</label>
+          <label for="exampleInputEmail1">Adauga sezon</label>
           <input
             className="form-control"
             type="text"
