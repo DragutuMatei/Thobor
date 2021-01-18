@@ -178,7 +178,7 @@ function AddPost() {
           {numePoze}
         </label>
         <small id="emailHelp" class="form-text text-muted">
-          Mai multe poze
+          Mai multe poze cu nume diferite!!!
         </small>
         <div class="invalid-feedback">Idk</div>
       </div>
@@ -186,7 +186,7 @@ function AddPost() {
       <button type="submit" class="btn btn-primary m-2" onClick={submit}>
         Submit
       </button>
-      <h1>Dupa ce e pusa o postare asteapta un minut pana sa pui alta</h1>
+      <h5>Dupa ce e pusa o postare asteapta un minut pana sa pui alta</h5>
       {ok && <h1>Gata</h1>}
 
       {/* <div className="row">
