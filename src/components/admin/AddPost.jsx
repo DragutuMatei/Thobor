@@ -102,7 +102,7 @@ function AddPost() {
         ></textarea>
         <small id="emailHelp" class="form-text text-muted"></small>
       </div>
-      <h1>Thumbnail</h1>
+      <h5>Thumbnail</h5>
       <div class="custom-file">
         <input
           type="file"
@@ -162,7 +162,7 @@ function AddPost() {
         </small>
       </div>
 
-      <h1>Poze</h1>
+      <h5>Poze</h5>
       <div class="custom-file">
         <input
           type="file"
