@@ -174,7 +174,7 @@ function AddPost() {
           }}
         />
         <label class="custom-file-label" for="validatedCustomFile">
-          Choose file...
+          {numePoze}
         </label>
         <small id="emailHelp" class="form-text text-muted">
           Mai multe poze

@@ -110,7 +110,7 @@ function AddPozaGalerie() {
             }}
           />
           <label class="custom-file-label" for="validatedCustomFile">
-            Choose file...
+            {pozeNume}
           </label>
           <small id="emailHelp" class="form-text text-muted">
             Mai multe poze

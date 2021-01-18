@@ -75,7 +75,7 @@ function AddMembru() {
             }}
           />
           <label class="custom-file-label" for="validatedCustomFile">
-            Choose file...
+            {pozaName}
           </label>
           <small id="emailHelp" class="form-text text-muted">
             Doar o poza
