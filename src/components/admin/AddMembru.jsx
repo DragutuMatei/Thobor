@@ -43,7 +43,7 @@ function AddMembru() {
 
   return (
     <>
-      <div className="addMembru">
+      <div className="addMembru"style={{ padding: "0 50px" }}>
         <div class="form-group">
           <label for="exampleInputEmail1">Nume Complet</label>
           <input
