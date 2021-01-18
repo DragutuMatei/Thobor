@@ -13,9 +13,6 @@ function AddPost() {
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
   const [ok, setOk] = useState(false);
-  
-
-
 
   const editThumbnail = (file) => {
     const reader = new FileReader();
@@ -105,7 +102,7 @@ function AddPost() {
         ></textarea>
         <small id="emailHelp" class="form-text text-muted"></small>
       </div>
-          <h1>Thumbnail</h1>
+      <h1>Thumbnail</h1>
       <div class="custom-file">
         <input
           type="file"
@@ -189,6 +186,7 @@ function AddPost() {
       <button type="submit" class="btn btn-primary m-2" onClick={submit}>
         Submit
       </button>
+      <h1>Dupa ce e pusa o postare asteapta un minut pana sa pui alta</h1>
       {ok && <h1>Gata</h1>}
 
       {/* <div className="row">
