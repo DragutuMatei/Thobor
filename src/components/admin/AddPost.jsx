@@ -81,9 +81,111 @@ function AddPost() {
   };
 
   return (
-    <div className="addPost">
-      <div className="row">
-        <h2>Titlu</h2>
+    <div className="addPost" style={{padding:"0 50px"}}>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Titlu</label>
+        <textarea
+          className="form-control"
+          onChange={(e) => {
+            setTitlu(e.target.value);
+          }}
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Descriere</label>
+        <textarea
+          className="form-control"
+          onChange={(e) => {
+            setDescriere(e.target.value);
+          }}
+        ></textarea>
+        <small id="emailHelp" class="form-text text-muted"></small>
+      </div>
+
+      <div class="custom-file">
+        <input
+          type="file"
+          class="custom-file-input"
+          id="validatedCustomFile"
+          onChange={(e) => {
+            setThumbnail(e.target.files[0].name);
+            editThumbnail(e.target.files[0]);
+          }}
+        />
+        <label class="custom-file-label" for="validatedCustomFile">
+          Choose file...
+        </label>
+        <small id="emailHelp" class="form-text text-muted">O singura poza</small>
+        <div class="invalid-feedback">Idk</div>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Ziua</label>
+        <input
+          className="form-control"
+          type="text"
+          onChange={(e) => {
+            setDay(e.target.value);
+          }}
+        />
+        <small id="emailHelp" class="form-text text-muted"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Luna</label>
+        <input
+          className="form-control"
+          type="text"
+          onChange={(e) => {
+            setMonth(e.target.value);
+          }}
+        />
+        <small id="emailHelp" class="form-text text-muted">Se scrie luna complet</small>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">An</label>
+        <input
+          className="form-control"
+          type="text"
+          onChange={(e) => {
+            setYear(e.target.value);
+          }}
+        />
+        <small id="emailHelp" class="form-text text-muted">Se scrie luna complet</small>
+      </div>
+
+
+
+
+      <div class="custom-file">
+         <input
+          type="file"
+          class="custom-file-input"
+          id="validatedCustomFile"
+          multiple
+          onChange={(e) => {
+            file(e.target.files);
+            Nume(e.target.files);
+          }}
+        />
+        <label class="custom-file-label" for="validatedCustomFile">
+          Choose file...
+        </label>
+        <small id="emailHelp" class="form-text text-muted">Mai multe poze</small>
+        <div class="invalid-feedback">Idk</div>
+
+      </div>
+
+
+      <button type="submit" class="btn btn-primary m-2" onClick={submit}>
+        Submit
+      </button>
+      {ok && <h1>Gata</h1>}
+
+      {/* <div className="row">
+        <h2>c</h2>
         <textarea
           type="text"
           className="nush"
@@ -110,7 +212,6 @@ function AddPost() {
           }}
         />
       </div>
-
       <div className="row">
         <h2>day</h2>
         <input
@@ -138,7 +239,6 @@ function AddPost() {
           }}
         />
       </div>
-
       <div className="row">
         <h2>Poze</h2>
         <input
@@ -150,8 +250,7 @@ function AddPost() {
           }}
         />
       </div>
-      <button onClick={submit}>Submit</button>
-      {ok && <h1>Gata</h1>}
+      <button onClick={submit}>Submit</button> */}
     </div>
   );
 }

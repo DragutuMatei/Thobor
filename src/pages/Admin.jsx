@@ -11,15 +11,18 @@ import AddPozaGalerie from "../components/galarie/AddPozaGalerie";
 function Admin() {
   const [post, setPost] = useState([]);
 
-  useEffect(() => {
-    axios.get(port + "/getBlogPosts").then((res) => {
-      setPost(res.data);
-    });
-  }, [
-    // axios.get(port + "/getBlogPosts").then((res) => {
-    //   return res.data;
-    // }),
-  ]);
+  useEffect(
+    () => {
+      axios.get(port + "/getBlogPosts").then((res) => {
+        setPost(res.data);
+      });
+    },
+    [
+      // axios.get(port + "/getBlogPosts").then((res) => {
+      //   return res.data;
+      // }),
+    ]
+  );
 
   if (localStorage.getItem("email") !== user.email) {
     return <h1>Ce cauti aici?</h1>;
@@ -30,6 +33,16 @@ function Admin() {
       <div
         style={{ width: "100vw", height: "100px", position: "relative" }}
       ></div>
+      {window.location.pathname ===
+        "/fbk/adb/fkajdfbfkjb/adskfbakdfbkdbasf/sakdhvkasdjvsav" && (
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous"
+        />
+      )}
+
       <AddPost />
       <hr />
       <div className="posts">
@@ -39,7 +52,7 @@ function Admin() {
       <AddMembru />
       <Membrii ok={true} />
       <hr />
-      <AddPozaGalerie  />
+      <AddPozaGalerie />
     </>
   );
 }
