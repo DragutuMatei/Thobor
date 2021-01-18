@@ -62,37 +62,45 @@ function AddPozaGalerie() {
       }
       data.append("pozeNume", pozeNume);
       data.append("sezonP", document.querySelector("#sezon").value);
-      axios.post(port + "/admin/addPozeG", data, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      }).then((res) => {
-        if (res.data.ok) {
-          setOk(true);
-        }
-      });
+      axios
+        .post(port + "/admin/addPozeG", data, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
+        .then((res) => {
+          if (res.data.ok) {
+            setOk(true);
+          }
+        });
     }
   };
 
   return (
     <>
       <div style={{ padding: "0 50px" }}>
-        <select
-          class="form-control form-control-lg"
-          id="sezon"
-          onChange={(e) => {
-            setSezonP(e.target.value);
-          }}
-        >
-          <option value="any">Any</option>
-          {options.map((r) => (
-            <option value={r.sezoane}>{r.sezoane}</option>
-          ))}
-        </select>
+        <div class="form-group mb-2">
+          <label for="exampleInputEmail1">Sezon</label>
+          <select
+            class="form-control form-control-lg"
+            id="sezon"
+            onChange={(e) => {
+              setSezonP(e.target.value);
+            }}
+          >
+            <option value="any">Any</option>
+            {options.map((r) => (
+              <option value={r.sezoane}>{r.sezoane}</option>
+            ))}
+          </select>
+          <small id="emailHelp" class="form-text text-muted">
+            Alege sezonul in care adaugi poze
+          </small>
+        </div>
         <div class="custom-file">
-        <input
-          class="custom-file-input"
-          id="validatedCustomFile"
+          <input
+            class="custom-file-input"
+            id="validatedCustomFile"
             type="file"
             multiple
             onChange={(e) => {
@@ -100,19 +108,19 @@ function AddPozaGalerie() {
               Nume(e.target.files);
             }}
           />
-        <label class="custom-file-label" for="validatedCustomFile">
-          Choose file...
-        </label>
-        <small id="emailHelp" class="form-text text-muted">
-          Mai multe poze
-        </small>
-        <div class="invalid-feedback">Idk</div>
+          <label class="custom-file-label" for="validatedCustomFile">
+            Choose file...
+          </label>
+          <small id="emailHelp" class="form-text text-muted">
+            Mai multe poze
+          </small>
+          <div class="invalid-feedback">Idk</div>
         </div>
         <button type="submit" class="btn btn-primary m-2" onClick={addPozeG}>
-        Submit
-      </button>
-      {ok && <h1>Gata</h1>}
-        
+          Submit
+        </button>
+        {ok && <h1>Gata</h1>}
+
         <div class="form-group">
           <label for="exampleInputEmail1">Titlu</label>
           <input
@@ -127,7 +135,6 @@ function AddPozaGalerie() {
           </button>
         </div>
 
-        
         {/* <select
           id="sezon"
           onChange={(e) => {
