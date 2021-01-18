@@ -79,6 +79,7 @@ function AddPozaGalerie() {
   return (
     <>
       <div style={{ padding: "0 50px" }}>
+        <h1>Adauga poze galerie</h1>
         <div class="form-group mb-2">
           <label for="exampleInputEmail1">Sezon</label>
           <select

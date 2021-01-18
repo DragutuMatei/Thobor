@@ -56,7 +56,7 @@ function AddMembru() {
           />
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
+          <label for="exampleInputPassword1">Departament</label>
           <input
             type="text"
             className="form-control"

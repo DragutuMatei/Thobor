@@ -42,13 +42,14 @@ function Admin() {
           crossorigin="anonymous"
         />
       )}
-
+      <h1>Adauga Postare</h1>
       <AddPost />
       <hr />
       <div className="posts">
         <Posts posts={post} ok={true} />
       </div>
       <hr />
+      <h1>Adauga Membru</h1>
       <AddMembru />
       <Membrii ok={true} />
       <hr />
