@@ -81,7 +81,7 @@ function AddPost() {
   };
 
   return (
-    <div className="addPost" style={{padding:"0 50px"}}>
+    <div className="addPost" style={{ padding: "0 50px" }}>
       <div class="form-group">
         <label for="exampleInputEmail1">Titlu</label>
         <textarea
@@ -116,7 +116,9 @@ function AddPost() {
         <label class="custom-file-label" for="validatedCustomFile">
           {thumbnail}
         </label>
-        <small id="emailHelp" class="form-text text-muted">O singura poza</small>
+        <small id="emailHelp" class="form-text text-muted">
+          O singura poza
+        </small>
         <div class="invalid-feedback">Idk</div>
       </div>
 
@@ -141,7 +143,9 @@ function AddPost() {
             setMonth(e.target.value);
           }}
         />
-        <small id="emailHelp" class="form-text text-muted">Se scrie luna complet</small>
+        <small id="emailHelp" class="form-text text-muted">
+          Se scrie luna complet
+        </small>
       </div>
 
       <div class="form-group">
@@ -153,14 +157,13 @@ function AddPost() {
             setYear(e.target.value);
           }}
         />
-        <small id="emailHelp" class="form-text text-muted">Se scrie luna complet</small>
+        <small id="emailHelp" class="form-text text-muted">
+          Se scrie luna complet
+        </small>
       </div>
 
-
-
-
       <div class="custom-file">
-         <input
+        <input
           type="file"
           class="custom-file-input"
           id="validatedCustomFile"
@@ -173,11 +176,11 @@ function AddPost() {
         <label class="custom-file-label" for="validatedCustomFile">
           Choose file...
         </label>
-        <small id="emailHelp" class="form-text text-muted">Mai multe poze</small>
+        <small id="emailHelp" class="form-text text-muted">
+          Mai multe poze
+        </small>
         <div class="invalid-feedback">Idk</div>
-
       </div>
-
 
       <button type="submit" class="btn btn-primary m-2" onClick={submit}>
         Submit

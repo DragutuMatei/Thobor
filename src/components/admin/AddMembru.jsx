@@ -35,7 +35,7 @@ function AddMembru() {
         })
         .then((res) => {
           if (res.data.ok) {
-          setOk(true);
+            setOk(true);
           }
         });
     }
@@ -44,7 +44,49 @@ function AddMembru() {
   return (
     <>
       <div className="addMembru">
-        <div className="row">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Nume Complet</label>
+          <input
+            type="text"
+            className="form-control"
+            name="Asdas"
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="text"
+            className="form-control"
+            onChange={(e) => {
+              setDepartament(e.target.value);
+            }}
+          />
+        </div>
+        <div class="custom-file">
+          <input
+            class="custom-file-input"
+            type="file"
+            onChange={(e) => {
+              setPozaName(e.target.files[0].name);
+              editFile(e.target.files[0]);
+            }}
+          />
+          <label class="custom-file-label" for="validatedCustomFile">
+            Choose file...
+          </label>
+          <small id="emailHelp" class="form-text text-muted">
+            Doar o poza
+          </small>
+          <div class="invalid-feedback">Idk</div>
+        </div>
+        <button type="submit" class="btn btn-primary" onClick={submit}>
+          Submit
+        </button>
+
+        {/* <div className="row">
           <h1 className="sadasd">name</h1>
           <input
             type="text"
@@ -74,7 +116,7 @@ function AddMembru() {
             }}
           />
         </div>
-        <button onClick={submit}>Submit</button>
+        <button onClick={submit}>Submit</button> */}
         {ok && <h1>Gata</h1>}
       </div>
     </>
