@@ -10,7 +10,10 @@ function Apps() {
       ></div>
       <Aplicatie />
       <div className="qr">
-        <a href="https://play.google.com/store/apps/details?id=ro.thobor.ar">
+        <a
+          href="https://play.google.com/store/apps/details?id=ro.thobor.ar"
+          target="_blank"
+        >
           Download - Android
         </a>
         <img src={require("../assets/Apps/qr.jpg").default} alt="" />
@@ -34,7 +37,9 @@ function Apps() {
         </div>
       </div>
       <div className="qr">
-        <a href="https://thobornights.netlify.app/">Thobor Nigths</a>
+        <a href="https://thobornights.netlify.app/" target="_blank">
+          Thobor Nigths
+        </a>
       </div>
       <Up />
     </>
