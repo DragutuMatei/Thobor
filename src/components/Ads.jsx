@@ -7,13 +7,13 @@ function Ads() {
       <AdSense.Google
         className="right"
         style={{ width: 300, height: 300 }}
-        client="ca-pub-8761774704"
+        client="ca-pub-7900802648960033"
         format=""
-        slot="5123103463"
-        //   8761774704
+        slot="8761774704"
       />
     </>
   );
 }
 
 export default Ads;
+ 

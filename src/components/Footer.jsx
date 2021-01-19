@@ -49,7 +49,6 @@ function Footer() {
           ))}
         </div>
         <Ads/>
-        {/* <div className="right ads"></div> */}
       </div>
       <h4 className="bottom">
         THOBOR | Echipa de robotică a Colegiului Național “Calistrat Hogaș”
