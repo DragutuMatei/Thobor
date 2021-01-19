@@ -59,6 +59,7 @@ function BlogPost({ match }) {
     axios
       .post(port + "/getBlogPost", { titlu: match.params.titlu })
       .then((res) => {
+        console.log(res.data);
         setTit(res.data[0].titlu.trim());
         setDescriere(res.data[0].descriere.trim());
         setTh(res.data[0].thumbnail.trim());
@@ -66,7 +67,6 @@ function BlogPost({ match }) {
         setDay(res.data[0].day);
         setMonth(res.data[0].month.trim());
         setYear(res.data[0].year);
-        console.log(res.data);
       });
     axios.post(port + "/getCom", { tit: match.params.titlu }).then((res) => {
       setComments(res.data);
