@@ -9,7 +9,8 @@ function Ads() {
         style={{ width: 300, height: 300 }}
         client="ca-pub-7900802648960033"
         format=""
-        slot="5123103463"
+        slot="8761774704"
+        //   8761774704
       />
     </>
   );
