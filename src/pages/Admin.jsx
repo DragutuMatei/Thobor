@@ -42,7 +42,7 @@ function Admin() {
           crossorigin="anonymous"
         />
       )}
-      <h1>Adauga Postare - fara semne -</h1>
+      <h1>Adauga Postare - fara semne sau emoticoane-</h1>
       <AddPost />
       <hr />
       <div className="posts">
