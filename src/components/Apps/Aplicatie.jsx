@@ -1,6 +1,6 @@
 import React from "react";
 
-function Aplicatie() {
+function Aplicatie({}) {
   return (
     <>
       <div className="apl">
