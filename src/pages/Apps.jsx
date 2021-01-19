@@ -30,7 +30,6 @@ function Apps() {
           <h4>
             Ne poti sustine echipa pe facebook, <b> instagram</b> sau
             <b> youtube!</b>
-            
           </h4>
         </div>
       </div>
