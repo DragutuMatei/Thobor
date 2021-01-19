@@ -79,7 +79,20 @@ function AddPost() {
       });
     }
   };
-
+  const MonthArr = [
+    "Ianuarie",
+    "Februarie",
+    "Martie",
+    "Aprilie",
+    "Mai",
+    "Iunie",
+    "Iulie",
+    "August",
+    "Septembrie",
+    "Octombrie",
+    "Noiembrie",
+    "Decembrie",
+  ];
   return (
     <div className="addPost" style={{ padding: "0 50px" }}>
       <div class="form-group">
@@ -134,15 +147,20 @@ function AddPost() {
         <small id="emailHelp" class="form-text text-muted"></small>
       </div>
 
-      <div class="form-group">
+      <div class="form-group mb-2">
         <label for="exampleInputEmail1">Luna</label>
-        <input
-          className="form-control"
-          type="text"
+        <select
+          class="form-control form-control-lg"
+          id="sezon"
           onChange={(e) => {
             setMonth(e.target.value);
           }}
-        />
+        >
+          <option value="any">Any</option>
+          {MonthArr.map((r) => (
+            <option value={r}>{r}</option>
+          ))}
+        </select>
         <small id="emailHelp" class="form-text text-muted">
           Se scrie luna complet in romana si cu litera mare
         </small>
