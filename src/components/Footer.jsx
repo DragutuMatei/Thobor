@@ -14,6 +14,11 @@ function Footer() {
 
   return (
     <>
+    <script
+      data-ad-client="ca-pub-7900802648960033"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
       <div className="footer">
         <div className="left">
           <img src={require("../assets/logo.png").default} alt="" />
