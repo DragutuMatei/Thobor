@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Ads from "./Ads";
 import port from "./Port";
 
 function Footer() {
@@ -47,7 +48,8 @@ function Footer() {
             <Link to={"/blog/" + p.titlu}>{p.titlu}</Link>
           ))}
         </div>
-        <div className="right ads"></div>
+        <Ads/>
+        {/* <div className="right ads"></div> */}
       </div>
       <h4 className="bottom">
         THOBOR | Echipa de robotică a Colegiului Național “Calistrat Hogaș”
