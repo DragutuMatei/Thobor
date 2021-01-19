@@ -19,7 +19,6 @@ function Posts({ posts, ok }) {
                 <Link to={link}>
                   <img
                     src={b.thumbnail}
-                    // src={require("../../assets/blog/" + b.thumbnail).default}
                     alt=""
                   />
                   <h1>{b.titlu}</h1>

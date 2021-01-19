@@ -66,6 +66,7 @@ function BlogPost({ match }) {
         setDay(res.data[0].day);
         setMonth(res.data[0].month.trim());
         setYear(res.data[0].year);
+        console.log(res.data);
       });
     axios.post(port + "/getCom", { tit: match.params.titlu }).then((res) => {
       setComments(res.data);
