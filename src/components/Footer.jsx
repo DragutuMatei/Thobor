@@ -55,6 +55,7 @@ function Footer() {
         THOBOR | Echipa de robotică a Colegiului Național “Calistrat Hogaș”
         Tecuci
       </h4>
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     </>
   );
 }
