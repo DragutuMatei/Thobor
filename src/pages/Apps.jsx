@@ -34,11 +34,9 @@ function Apps() {
         </div>
       </div>
       <div className="qr">
-        <a href="https://thobornights.netlify.app/">
-          Thobor Nigths
-        </a>
+        <a href="https://thobornights.netlify.app/">Thobor Nigths</a>
       </div>
-      <Up/>
+      <Up />
     </>
   );
 }
