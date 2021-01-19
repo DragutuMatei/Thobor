@@ -7,7 +7,7 @@ function Ads() {
       <AdSense.Google
         className="right"
         style={{ width: 300, height: 300 }}
-        client="ca-pub-5123103463"
+        client="5123103463"
         format=""
         slot="8761774704"
       />
