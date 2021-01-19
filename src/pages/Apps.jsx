@@ -19,7 +19,7 @@ function Apps() {
         <img src={require("../assets/Apps/qr.jpg").default} alt="" />
       </div>
       <div className="apl">
-        <img src={require("../../assets/Apps/scavanger.png").default} alt="" />
+        <img src={require("../assets/Apps/scavanger.png").default} alt="" />
         <div className="sc">
           <h1>Aplicatia noastră - Realitate Augmentata -</h1>
           <p>
