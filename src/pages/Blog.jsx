@@ -25,6 +25,7 @@ function Blog() {
   return (
     <>
       <div
+        id="up"
         style={{ width: "100vw", height: "100px", position: "relative" }}
       ></div>
       <div className="posts">

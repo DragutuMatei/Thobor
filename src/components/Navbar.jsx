@@ -90,7 +90,7 @@ export default function Navabar() {
     <>
       <div className="navbar">
         <div className="logo">
-          <Link to="/">
+          <Link to="/#up">
             <img src={require("../assets/logo.png").default} alt="" />
           </Link>
           <i onClick={downUp} className="fa fa-bars"></i>
@@ -99,7 +99,7 @@ export default function Navabar() {
           <div className="over">
             <div className="link">
               <Link
-                to="/"
+                to="/#up"
                 style={{ color: home }}
                 onClick={() => {
                   col("home");
@@ -110,7 +110,7 @@ export default function Navabar() {
             </div>
             <div className="link">
               <Link
-                to="/blog"
+                to="/blog#up"
                 style={{ color: blog }}
                 onClick={() => {
                   col("blog");
@@ -121,7 +121,7 @@ export default function Navabar() {
             </div>
             <div className="link">
               <Link
-                to="/galerie"
+                to="/galerie#up"
                 style={{ color: galerie }}
                 onClick={() => {
                   col("galerie");
@@ -132,7 +132,7 @@ export default function Navabar() {
             </div>
             <div className="link">
               <Link
-                to="/alumni"
+                to="/alumni#up"
                 style={{ color: alumni }}
                 onClick={() => {
                   col("alumni");
@@ -143,7 +143,7 @@ export default function Navabar() {
             </div>
             <div className="link">
               <Link
-                to="/apps"
+                to="/apps#up"
                 style={{ color: apps }}
                 onClick={() => {
                   col("apps");
@@ -154,7 +154,7 @@ export default function Navabar() {
             </div>
             <div className="link">
               <Link
-                to="/despre"
+                to="/despre#up"
                 style={{ color: despre }}
                 onClick={() => {
                   col("despre");
@@ -165,7 +165,7 @@ export default function Navabar() {
             </div>
             <div className="link">
               <a
-                href="/#contacte"
+                href="/#contacte#up"
                 style={{ color: contact }}
                 onClick={() => {
                   col("contact");
@@ -190,7 +190,7 @@ export default function Navabar() {
             ) : (
               <div className="link">
                 <Link
-                  to="/login"
+                  to="/login#up"
                   style={{ color: login }}
                   onClick={() => {
                     col("login");

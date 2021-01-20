@@ -11,6 +11,7 @@ function Home() {
   return (
     <>
       <div
+        id="up"
         style={{ width: "100vw", height: "70px", position: "relative" }}
       ></div>
       <Landing />

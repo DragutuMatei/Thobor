@@ -8,6 +8,7 @@ function Despre() {
   return (
     <>
       <div
+        id="up"
         style={{ width: "100vw", height: "120px", position: "relative" }}
       ></div>
       <Header

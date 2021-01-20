@@ -16,6 +16,7 @@ function Galerie() {
   return (
     <>
       <div
+        id="up"
         style={{ width: "100vw", height: "100px", position: "relative" }}
       ></div>
       <Header

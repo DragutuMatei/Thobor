@@ -64,6 +64,7 @@ function Login() {
   return (
     <>
       <div
+        id="up"
         style={{ width: "100vw", height: "80px", position: "relative" }}
       ></div>
       <div className="log">
