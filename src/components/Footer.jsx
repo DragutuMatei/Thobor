@@ -46,9 +46,6 @@ function Footer() {
           <h1>Postari Recente</h1>
           {postari.map((p) => (
             <Link
-              onClick={() => {
-                window.location.reload();
-              }}
               to={"/blog/" + p.titlu}
             >
               {p.titlu}

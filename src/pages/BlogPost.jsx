@@ -62,7 +62,7 @@ function BlogPost({ match }) {
         setTit(res.data[0].titlu.trim());
         setDescriere(res.data[0].descriere.trim());
         setTh(res.data[0].thumbnail.trim());
-        setImg(res.data[0].imag.split(";"));
+        setImg(res.data[0].imag.slice(0, -1).split(";"));
         setDay(res.data[0].day);
         setMonth(res.data[0].month.trim());
         setYear(res.data[0].year);
