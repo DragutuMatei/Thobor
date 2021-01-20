@@ -52,8 +52,8 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: 0.5s ease-in;
-  transition: 0.5s ease-in;
+  -webkit-transition: width 0.5s ease-in;
+  transition: width 0.5s ease-in;
   background: #000000b4;
   top: 0;
   left: 0;
@@ -62,8 +62,8 @@ html {
 
 .full i {
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 20px;
+  right: 20px;
   font-size: 50px;
   color: #17aa4b;
   font-weight: 900;
@@ -380,10 +380,10 @@ html {
 }
 
 .fullPage .post .descr {
-  -webkit-user-select: auto;
-     -moz-user-select: auto;
-      -ms-user-select: auto;
-          user-select: auto;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-flex-item-align: center;
