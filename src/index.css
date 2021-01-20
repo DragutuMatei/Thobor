@@ -39,6 +39,36 @@ html {
   overflow-x: hidden;
 }
 
+.full {
+  z-index: 111;
+  position: fixed;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+  background: #000000b4;
+  top: 0;
+  left: 0;
+}
+
+.full i {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 50px;
+  color: #17aa4b;
+  font-weight: 900;
+  cursor: pointer;
+}
+
 .navbar {
   width: 100vw;
   height: 70px;
@@ -538,7 +568,6 @@ html {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  position: relative;
   padding: 70px 0;
 }
 

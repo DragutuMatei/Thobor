@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import port from "../components/Port";
+import Img from "../Img";
 
 function BlogPost({ match }) {
   const [tit, setTit] = useState("");
@@ -94,7 +95,7 @@ function BlogPost({ match }) {
           <div className="descr">{desc}</div>
           <div className="fle">
             {img.map((i) => (
-              <img key={Math.random()} src={i} />
+              <Img key={Math.random()} src={i}/>
             ))}
           </div>
           <div className="coment">
