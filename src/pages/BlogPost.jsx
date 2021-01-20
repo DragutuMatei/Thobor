@@ -59,7 +59,6 @@ function BlogPost({ match }) {
     axios
       .post(port + "/getBlogPost", { titlu: match.params.titlu })
       .then((res) => {
-        console.log(res.data, match.params.titlu);
         setTit(res.data[0].titlu.trim());
         setDescriere(res.data[0].descriere.trim());
         setTh(res.data[0].thumbnail.trim());
