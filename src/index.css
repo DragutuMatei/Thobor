@@ -376,6 +376,7 @@ html {
   height: auto;
   margin: 10px;
   margin-bottom: 40px;
+  max-width: 360px;
 }
 
 .fullPage .post .coment {
