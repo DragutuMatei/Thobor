@@ -71,7 +71,7 @@ function BlogPost({ match }) {
       setComments(res.data);
     });
   }, [
-    window.location.pathname
+    window.location.href
   ]);
 
   return (
