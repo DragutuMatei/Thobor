@@ -24,7 +24,11 @@ function Img({ src }) {
               setOpen(false);
             }}
           ></i>
-          <img src={src} alt="Sssssss" />
+          <img
+            src={src}
+            alt="Sssssss"
+            style={{ maxWidth: "95vw", height: "auto", maxHeight: "95vh" }}
+          />
         </div>
       )}
     </>
