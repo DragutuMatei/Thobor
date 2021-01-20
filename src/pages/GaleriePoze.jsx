@@ -15,8 +15,7 @@ function GaleriePoze({ match }) {
 
   return (
     <>
-      <div
-        id="up"
+      <div 
         style={{ width: "100vw", height: "100px", position: "relative" }}
       ></div>
       <div className="fullPage displayFlex">

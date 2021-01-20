@@ -6,7 +6,7 @@ function Apps() {
   return (
     <>
       <div
-        id="up"
+        id="upapps"
         style={{ width: "100vw", height: "120px", position: "relative" }}
       ></div>
       <Aplicatie />

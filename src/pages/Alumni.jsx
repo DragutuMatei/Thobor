@@ -8,7 +8,7 @@ function Alumni() {
   return (
     <>
       <div
-        id="up"
+        id="upalumni"
         style={{ width: "100vw", height: "100px", position: "relative" }}
       ></div>
       <Header

@@ -110,7 +110,7 @@ export default function Navabar() {
             </div>
             <div className="link">
               <Link
-                to="/blog#up"
+                to="/blog#upblog"
                 style={{ color: blog }}
                 onClick={() => {
                   col("blog");
@@ -121,7 +121,7 @@ export default function Navabar() {
             </div>
             <div className="link">
               <Link
-                to="/galerie#up"
+                to="/galerie#upgalerie"
                 style={{ color: galerie }}
                 onClick={() => {
                   col("galerie");
@@ -132,7 +132,7 @@ export default function Navabar() {
             </div>
             <div className="link">
               <Link
-                to="/alumni#up"
+                to="/alumni#upalumni"
                 style={{ color: alumni }}
                 onClick={() => {
                   col("alumni");
@@ -143,7 +143,7 @@ export default function Navabar() {
             </div>
             <div className="link">
               <Link
-                to="/apps#up"
+                to="/apps#upapps"
                 style={{ color: apps }}
                 onClick={() => {
                   col("apps");
@@ -154,7 +154,7 @@ export default function Navabar() {
             </div>
             <div className="link">
               <Link
-                to="/despre#up"
+                to="/despre#updespre"
                 style={{ color: despre }}
                 onClick={() => {
                   col("despre");
@@ -165,7 +165,7 @@ export default function Navabar() {
             </div>
             <div className="link">
               <a
-                href="/#contacte#up"
+                href="/#contacte"
                 style={{ color: contact }}
                 onClick={() => {
                   col("contact");
@@ -190,7 +190,7 @@ export default function Navabar() {
             ) : (
               <div className="link">
                 <Link
-                  to="/login#up"
+                  to="/login#uplogin"
                   style={{ color: login }}
                   onClick={() => {
                     col("login");
