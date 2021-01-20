@@ -16,7 +16,7 @@ function Img({ src }) {
       {open && (
         <div
           className="full"
-          style={{ width: open ? "100vw" : "0", height: open ? "100vh" : "0" }}
+          style={{ width: open ? "100vw" : "0", transition:"0.5s ease-in" }}
         >
           <i
             class="fas fa-times"

@@ -57,6 +57,7 @@ html {
   background: #000000b4;
   top: 0;
   left: 0;
+  height: 100vh;
 }
 
 .full i {
@@ -67,6 +68,17 @@ html {
   color: #17aa4b;
   font-weight: 900;
   cursor: pointer;
+}
+
+.full * {
+  overflow: hidden;
+}
+
+.full img {
+  max-width: 95vw;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .navbar {
