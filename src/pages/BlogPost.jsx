@@ -70,7 +70,9 @@ function BlogPost({ match }) {
     axios.post(port + "/getCom", { tit: match.params.titlu }).then((res) => {
       setComments(res.data);
     });
-  }, []);
+  }, [
+    window.location.pathname
+  ]);
 
   return (
     <>
