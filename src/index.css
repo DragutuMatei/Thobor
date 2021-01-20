@@ -537,6 +537,7 @@ html {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  position: relative;
   padding: 70px 0;
 }
 
