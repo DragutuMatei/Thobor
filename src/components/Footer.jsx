@@ -15,11 +15,11 @@ function Footer() {
 
   return (
     <>
-    <script
-      data-ad-client="ca-pub-7900802648960033"
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    ></script>
+      <script
+        data-ad-client="ca-pub-7900802648960033"
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      ></script>
       <div className="footer">
         <div className="left">
           <img src={require("../assets/logo.png").default} alt="" />
@@ -45,16 +45,26 @@ function Footer() {
         <div className="center">
           <h1>Postari Recente</h1>
           {postari.map((p) => (
-            <Link to={"/blog/" + p.titlu}>{p.titlu}</Link>
+            <Link
+              onClick={() => {
+                window.location.reload();
+              }}
+              to={"/blog/" + p.titlu}
+            >
+              {p.titlu}
+            </Link>
           ))}
         </div>
-        <Ads/>
+        <Ads />
       </div>
       <h4 className="bottom">
         THOBOR | Echipa de robotică a Colegiului Național “Calistrat Hogaș”
         Tecuci
       </h4>
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script
+        async
+        src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      ></script>
     </>
   );
 }
