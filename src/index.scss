@@ -50,6 +50,7 @@ html {
   }
 
   img{
+    width: -webkit-fill-available;
     max-width: 95vw;
     height: auto;
     object-fit: contain;
