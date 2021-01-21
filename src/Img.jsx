@@ -22,7 +22,7 @@ function Img({ src }) {
           <i
             class="fas fa-times"
             onClick={() => {
-          document.querySelector("full").classList.toggle("width");
+          document.querySelector(".full").classList.toggle("width");
           // setOpen(false);
             }}
           ></i>
