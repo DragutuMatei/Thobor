@@ -34,7 +34,6 @@ html {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 0;
 
   i {
     position: absolute;
@@ -57,10 +56,6 @@ html {
     object-fit: contain;
   }
 
-}
-
-.width{
-  width: 100vw;
 }
 
 .navbar {

@@ -8,22 +8,17 @@ function Img({ src }) {
         src={src}
         style={{ cursor: "pointer" }}
         onClick={() => {
-          document.querySelector(".full").classList.toggle("width");
-          // setOpen(true);
+          setOpen(true);
         }}
         alt=""
       />
 
-      {/* {open && ( */}
-        <div
-          className="full"
-          // style={{ width: open ? "100vw" : "0"  }}
-        >
+      {open && (
+        <div className="full" style={{ width: open ? "100vw" : "0" }}>
           <i
             class="fas fa-times"
             onClick={() => {
-          document.querySelector(".full").classList.toggle("width");
-          // setOpen(false);
+              setOpen(false);
             }}
           ></i>
           <img
@@ -32,7 +27,7 @@ function Img({ src }) {
             style={{ maxWidth: "95vw", height: "auto", maxHeight: "95vh" }}
           />
         </div>
-      {/* )} */}
+      )}
     </>
   );
 }
