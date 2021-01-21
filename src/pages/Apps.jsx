@@ -1,6 +1,7 @@
 import React from "react";
 import Aplicatie from "../components/Apps/Aplicatie";
 import Up from "../components/Home/Up";
+import Img from "../Img";
 
 function Apps() {
   return (
@@ -17,7 +18,7 @@ function Apps() {
         >
           Download - Android
         </a>
-        <img src={require("../assets/Apps/qr.jpg").default} alt="" />
+        <Img src={require("../assets/Apps/qr.jpg").default} />
       </div>
       <div className="apl">
         <img src={require("../assets/Apps/scavanger.png").default} alt="" />
