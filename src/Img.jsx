@@ -8,7 +8,8 @@ function Img({ src }) {
         src={src}
         style={{ cursor: "pointer" }}
         onClick={() => {
-          setOpen(true);
+          document.querySelector("full").classList.toggle("width");
+          // setOpen(true);
         }}
         alt=""
       />
@@ -21,7 +22,8 @@ function Img({ src }) {
           <i
             class="fas fa-times"
             onClick={() => {
-              setOpen(false);
+          document.querySelector("full").classList.toggle("width");
+          // setOpen(false);
             }}
           ></i>
           <img

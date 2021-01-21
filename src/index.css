@@ -82,6 +82,10 @@ html {
      object-fit: contain;
 }
 
+.width {
+  width: 100vw;
+}
+
 .navbar {
   width: 100vw;
   height: 70px;
