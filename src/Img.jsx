@@ -8,7 +8,7 @@ function Img({ src }) {
         src={src}
         style={{ cursor: "pointer" }}
         onClick={() => {
-          document.querySelector("full").classList.toggle("width");
+          document.querySelector(".full").classList.toggle("width");
           // setOpen(true);
         }}
         alt=""
