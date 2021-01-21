@@ -14,10 +14,10 @@ function Img({ src }) {
         alt=""
       />
 
-      {open && (
+      {/* {open && ( */}
         <div
           className="full"
-          style={{ width: open ? "100vw" : "0"  }}
+          // style={{ width: open ? "100vw" : "0"  }}
         >
           <i
             class="fas fa-times"
@@ -32,7 +32,7 @@ function Img({ src }) {
             style={{ maxWidth: "95vw", height: "auto", maxHeight: "95vh" }}
           />
         </div>
-      )}
+      {/* )} */}
     </>
   );
 }
