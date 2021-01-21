@@ -94,7 +94,7 @@ function BlogPost({ match }) {
           </h1>
           <div className="descr">{desc}</div>
           <div className="fle">
-            <img src={th} alt=""/>
+            <Img src={th} alt=""/>
             {img.map((i) => (
               <Img key={Math.random()} src={i}/>
             ))}
