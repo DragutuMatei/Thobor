@@ -45,17 +45,16 @@ html {
     cursor: pointer;
   }
 
-  *{
+  * {
     overflow: hidden;
   }
 
-  img{
+  img {
     width: -webkit-fill-available;
     max-width: 95vw;
     height: auto;
     object-fit: contain;
   }
-
 }
 
 .navbar {
@@ -1192,6 +1191,7 @@ $brand-primary: #17aa4b;
     display: flex;
     flex-direction: column;
     width: 360px;
+    padding: 30px;
     height: auto;
     justify-content: space-around;
 

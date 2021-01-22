@@ -58,7 +58,6 @@ html {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 0;
 }
 
 .full i {
@@ -1639,6 +1638,7 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 360px;
+  padding: 30px;
   height: auto;
   -ms-flex-pack: distribute;
       justify-content: space-around;
