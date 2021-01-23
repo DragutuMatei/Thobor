@@ -48,6 +48,7 @@ function AddPozaGalerie() {
   };
 
   const addPozeG = () => {
+    console.log(poze, pozeNume, sezonP);
     if (
       poze === [] ||
       pozeNume === "" ||
