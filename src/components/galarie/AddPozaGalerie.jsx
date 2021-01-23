@@ -77,8 +77,8 @@ function AddPozaGalerie() {
     }
   };
 
-  const del = (id) => {
-    axios.post(port + "/admin/delImg", { id: id }).then((r) => {
+  const del = (id, s) => {
+    axios.post(port + "/admin/delImg", { id: id, s:s }).then((r) => {
       setI(r.data);
     });
   };
@@ -97,7 +97,6 @@ function AddPozaGalerie() {
       setH("auto");
     }
   }
-  console.log(i);
   return (
     <>
       <div style={{ padding: "0 50px" }}>
@@ -166,7 +165,7 @@ function AddPozaGalerie() {
                 <div className="pa">
                   <img src={s} alt="" />
                   <h1>{a.sezon}</h1>
-                  {/* <button onClick={del(a.id)}>delete</button> */}
+                  <button onClick={del(a.id, s)}>delete</button>
                 </div>
               </>
             ));
