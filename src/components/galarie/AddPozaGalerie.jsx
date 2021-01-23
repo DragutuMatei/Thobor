@@ -82,7 +82,21 @@ function AddPozaGalerie() {
       setI(r.data);
     });
   };
+  const [clasa, setClasa] = useState("fas fa-caret-right");
+  const [color, setColor] = useState("#3d3c3c");
+  const [h, setH] = useState("0");
 
+  function more() {
+    if (clasa === "fas fa-caret-up") {
+      setClasa("fas fa-caret-right");
+      setColor("#3d3c3c");
+      setH("0");
+    } else {
+      setClasa("fas fa-caret-up");
+      setColor("#17aa4b");
+      setH("auto");
+    }
+  }
   console.log(i);
   return (
     <>
@@ -128,10 +142,20 @@ function AddPozaGalerie() {
         <button type="submit" class="btn btn-primary m-2" onClick={addPozeG}>
           Submit
         </button>
-        {ok && <h1>Gata</h1>}
-        {/* let arr = res.data[0].img.split(";");
-      arr.splice(arr.length - 1);
-      setI(arr); */}
+        {ok && <h1>Gata</h1>} 
+        
+
+        <div className="more">
+        <div className="press" onClick={more}>
+          <i className={clasa} style={{ color: color }}></i>
+          <span style={{color: color}}>Vezi Poze</span>
+        </div>
+        <div
+          className="hide"
+          style={{ height: h, transition: "0.5s ease-in-out" }}
+        >
+            <p style={{ margin: 30 }}>
+              
         <div className="poze">
           {i.map((a) => {
             const arr = a.img.split(";");
@@ -149,6 +173,9 @@ function AddPozaGalerie() {
           })}
         </div>
 
+          </p>
+        </div>
+      </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Adauga sezon</label>
           <input
