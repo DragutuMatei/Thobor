@@ -38,9 +38,8 @@ function AddPozaGalerie() {
     });
     axios.get(port + "/admin/getI").then((res) => {
       setI(res.data);
-      const arr = res.data[0].img.split(";").pop();
-      // console.log(res.data[0].img.split(";"));
-      console.log(arr);
+      let arr = res.data[0].img.split(";");
+      console.log(arr.splice(arr.length - 1));
     });
   }, []);
 
