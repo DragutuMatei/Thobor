@@ -85,6 +85,7 @@ function AddPozaGalerie() {
     });
   };
 
+  console.log(i);
   return (
     <>
       <div style={{ padding: "0 50px" }}>
@@ -132,7 +133,7 @@ function AddPozaGalerie() {
         {ok && <h1>Gata</h1>}
 
         <div className="poze">
-          {i.map((a) =>
+          {/* {i.map((a) =>
             a.img.map((s) => (
               <>
                 <div className="pa">
@@ -142,7 +143,7 @@ function AddPozaGalerie() {
                 </div>
               </>
             ))
-          )}
+          )} */}
         </div>
 
         <div class="form-group">
