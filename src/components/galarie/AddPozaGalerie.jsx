@@ -39,7 +39,7 @@ function AddPozaGalerie() {
     axios.get(port + "/admin/getI").then((res) => {
       setI(res.data);
       let arr = res.data[0].img.split(";");
-      arr = arr.splice(arr.length - 1);
+      arr.splice(arr.length - 1);
       console.log(arr);
     });
   }, []);
