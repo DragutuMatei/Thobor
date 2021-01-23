@@ -38,7 +38,7 @@ function AddPozaGalerie() {
     });
     axios.get(port + "/admin/getI").then((res) => {
       setI(res.data);
-      console.log(res.data);
+      console.log(res.data[0].img.split(";").pop());
     });
   }, []);
 
@@ -137,6 +137,7 @@ function AddPozaGalerie() {
                 <>
                 <div className="pa">
                     <img src={s} alt="" />
+                    <h1>{a.sezon}</h1>
                     <button  onClick={del(a.id)} >delete</button>
               </div>
               </>
