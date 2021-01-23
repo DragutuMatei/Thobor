@@ -9,6 +9,8 @@ function AddPozaGalerie() {
   const [sezon, setSezon] = useState("");
   const [sezonP, setSezonP] = useState("");
   const [ok, setOk] = useState(false);
+  const [i, setI] = useState([]);
+
 
   const Nume = (a) => {
     let n = "";
@@ -35,6 +37,9 @@ function AddPozaGalerie() {
     axios.get(port + "/admin/getSezon").then((res) => {
       setOption(res.data);
     });
+    axios.get(port + "/admin/getI").then((res) => {
+      setI(res.data);
+    })
   }, []);
 
   const addSezon = () => {
@@ -77,6 +82,16 @@ function AddPozaGalerie() {
     }
   };
 
+
+
+  const del = (id)=>{
+    axios.post(port + "/admin/delImg", { id: id }).then((r) => {
+      setI(r.data);
+      })
+  }
+
+
+
   return (
     <>
       <div style={{ padding: "0 50px" }}>
@@ -86,7 +101,7 @@ function AddPozaGalerie() {
           <select
             class="form-control form-control-lg"
             id="sezon"
-            onChange={(e) => {
+            onChange={(e) => {  
               setSezonP(e.target.value);
             }}
           >
@@ -122,6 +137,27 @@ function AddPozaGalerie() {
           Submit
         </button>
         {ok && <h1>Gata</h1>}
+
+        
+        <div className="poze">
+          {
+            i.map(a => (
+              a.img.split(";").pop().map((s) => (
+                <>
+                <div className="pa">
+                    <img src={s} alt="" />
+                    <button  onClick={del(a.id)} >delete</button>
+              </div>
+              </>
+             ))
+            ))
+            }
+        </div>
+        
+
+
+
+        
 
         <div class="form-group">
           <label for="exampleInputEmail1">Adauga sezon</label>
