@@ -11,7 +11,6 @@ function AddPozaGalerie() {
   const [ok, setOk] = useState(false);
   const [i, setI] = useState([]);
 
-
   const Nume = (a) => {
     let n = "";
     for (let i = 0; i < a.length; i++) {
@@ -39,7 +38,8 @@ function AddPozaGalerie() {
     });
     axios.get(port + "/admin/getI").then((res) => {
       setI(res.data);
-    })
+      console.log(res.data);
+    });
   }, []);
 
   const addSezon = () => {
@@ -54,11 +54,7 @@ function AddPozaGalerie() {
 
   const addPozeG = () => {
     console.log(poze, pozeNume, sezonP);
-    if (
-      poze === [] ||
-      pozeNume === "" ||
-      sezonP === "any"
-    ) {
+    if (poze === [] || pozeNume === "" || sezonP === "any") {
       alert("Toate campurile trebuie completate!");
     } else {
       const data = new FormData();
@@ -82,15 +78,11 @@ function AddPozaGalerie() {
     }
   };
 
-
-
-  const del = (id)=>{
+  const del = (id) => {
     axios.post(port + "/admin/delImg", { id: id }).then((r) => {
       setI(r.data);
-      })
-  }
-
-
+    });
+  };
 
   return (
     <>
@@ -101,7 +93,7 @@ function AddPozaGalerie() {
           <select
             class="form-control form-control-lg"
             id="sezon"
-            onChange={(e) => {  
+            onChange={(e) => {
               setSezonP(e.target.value);
             }}
           >
@@ -138,9 +130,8 @@ function AddPozaGalerie() {
         </button>
         {ok && <h1>Gata</h1>}
 
-        
         <div className="poze">
-          {
+          {/* {
             i.map(a => (
               a.img.split(";").pop().map((s) => (
                 <>
@@ -151,13 +142,8 @@ function AddPozaGalerie() {
               </>
              ))
             ))
-            }
+            } */}
         </div>
-        
-
-
-
-        
 
         <div class="form-group">
           <label for="exampleInputEmail1">Adauga sezon</label>
