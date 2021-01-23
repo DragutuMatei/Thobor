@@ -78,10 +78,11 @@ function AddPozaGalerie() {
   };
 
   const del = (id, s) => {
-    axios.post(port + "/admin/delImg", { id: id, s:s }).then((r) => {
+    axios.post(port + "/admin/delImg", { id: id, s: s }).then((r) => {
       setI(r.data);
     });
   };
+  
   const [clasa, setClasa] = useState("fas fa-caret-right");
   const [color, setColor] = useState("#3d3c3c");
   const [h, setH] = useState("0");
@@ -141,40 +142,37 @@ function AddPozaGalerie() {
         <button type="submit" class="btn btn-primary m-2" onClick={addPozeG}>
           Submit
         </button>
-        {ok && <h1>Gata</h1>} 
-        
+        {ok && <h1>Gata</h1>}
 
         <div className="more">
-        <div className="press" onClick={more}>
-          <i className={clasa} style={{ color: color }}></i>
-          <span style={{color: color}}>Vezi Poze</span>
-        </div>
-        <div
-          className="hide"
-          style={{ height: h, transition: "0.5s ease-in-out" }}
-        >
+          <div className="press" onClick={more}>
+            <i className={clasa} style={{ color: color }}></i>
+            <span style={{ color: color }}>Vezi Poze</span>
+          </div>
+          <div
+            className="hide"
+            style={{ height: h, transition: "0.5s ease-in-out" }}
+          >
             <p style={{ margin: 30 }}>
-              
-        <div className="poze">
-          {i.map((a) => {
-            const arr = a.img.split(";");
-            arr.splice(arr.length - 1);
+              <div className="poze">
+                {i.map((a) => {
+                  const arr = a.img.split(";");
+                  arr.splice(arr.length - 1);
 
-            return arr.map((s) => (
-              <>
-                <div className="pa">
-                  <img src={s} alt="" />
-                  <h1>{a.sezon}</h1>
-                  <button onClick={del(a.id, s)}>delete</button>
-                </div>
-              </>
-            ));
-          })}
+                  return arr.map((s) => (
+                    <>
+                      <div className="pa">
+                        <img src={s} alt="" />
+                        <h1>{a.sezon}</h1>
+                        <button onClick={del(a.id, s)}>delete</button>
+                      </div>
+                    </>
+                  ));
+                })}
+              </div>
+            </p>
+          </div>
         </div>
-
-          </p>
-        </div>
-      </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Adauga sezon</label>
           <input
