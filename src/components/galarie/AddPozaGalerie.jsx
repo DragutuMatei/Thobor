@@ -51,7 +51,7 @@ function AddPozaGalerie() {
     if (
       poze === [] ||
       pozeNume === "" ||
-      document.querySelector("#sezon").value === "any"
+      sezonP === "any"
     ) {
       alert("Toate campurile trebuie completate!");
     } else {
@@ -61,7 +61,7 @@ function AddPozaGalerie() {
         data.append("poze", poze[i]);
       }
       data.append("pozeNume", pozeNume);
-      data.append("sezonP", document.querySelector("#sezon").value);
+      data.append("sezonP", sezonP);
       axios
         .post(port + "/admin/addPozeG", data, {
           headers: {
@@ -135,40 +135,6 @@ function AddPozaGalerie() {
             Add sezon
           </button>
         </div>
-
-        {/* <select
-          id="sezon"
-          onChange={(e) => {
-            setSezonP(e.target.value);
-          }}
-        >
-          <option value="any">Any</option>
-          {options.map((r) => (
-            <option value={r.sezoane}>{r.sezoane}</option>
-          ))}
-        </select>
-
-        <div className="row">
-          <input
-            type="text"
-            onChange={(e) => {
-              setSezon(e.target.value);
-            }}
-          />
-          <button onClick={addSezon}>Add sezon</button>
-        </div>
-
-        <div className="row">
-          <input
-            type="file"
-            multiple
-            onChange={(e) => {
-              file(e.target.files);
-              Nume(e.target.files);
-            }}
-          />
-          <button onClick={addPozeG}>Add Poze Galerie</button> */}
-        {/* </div> */}
       </div>
     </>
   );
