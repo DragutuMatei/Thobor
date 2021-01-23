@@ -133,18 +133,15 @@ function AddPozaGalerie() {
 
         <div className="poze">
           {i.map((a) =>
-            a.img
-              .split(";")
-              .pop()
-              .map((s) => (
-                <>
-                  <div className="pa">
-                    <img src={s} alt="" />
-                    <h1>{a.sezon}</h1>
-                    <button onClick={del(a.id)}>delete</button>
-                  </div>
-                </>
-              ))
+            a.img.map((s) => (
+              <>
+                <div className="pa">
+                  <img src={s} alt="" />
+                  <h1>{a.sezon}</h1>
+                  <button onClick={del(a.id)}>delete</button>
+                </div>
+              </>
+            ))
           )}
         </div>
 
