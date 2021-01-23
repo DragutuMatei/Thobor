@@ -164,7 +164,7 @@ function AddPozaGalerie() {
                       <div className="pa">
                         <img src={s} alt="" />
                         <h1>{a.sezon}</h1>
-                        <button onClick={del(a.id, s)}>delete</button>
+                        {/* <button onClick={del(a.id, s)}>delete</button> */}
                       </div>
                     </>
                   ));
@@ -180,7 +180,7 @@ function AddPozaGalerie() {
             type="text"
             onChange={(e) => {
               setSezon(e.target.value);
-            }}
+            }}  
           />
           <button type="submit" class="btn btn-primary m-2" onClick={addSezon}>
             Add sezon
