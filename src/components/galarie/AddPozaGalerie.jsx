@@ -166,7 +166,7 @@ function AddPozaGalerie() {
                 <div className="pa">
                   <img src={s} alt="" />
                   <h1>{a.sezon}</h1>
-                  <button onClick={del(a.id)}>delete</button>
+                  {/* <button onClick={del(a.id)}>delete</button> */}
                 </div>
               </>
             ));
