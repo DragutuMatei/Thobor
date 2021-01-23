@@ -37,9 +37,7 @@ function AddPozaGalerie() {
       setOption(res.data);
     });
     axios.get(port + "/admin/getI").then((res) => {
-      let arr = res.data[0].img.split(";");
-      arr.splice(arr.length - 1);
-      setI(arr);
+      setI(res.data);
     });
   }, []);
 
@@ -131,10 +129,15 @@ function AddPozaGalerie() {
           Submit
         </button>
         {ok && <h1>Gata</h1>}
-
+        {/* let arr = res.data[0].img.split(";");
+      arr.splice(arr.length - 1);
+      setI(arr); */}
         <div className="poze">
-          {/* {i.map((a) =>
-            a.img.map((s) => (
+          {i.map((a) => {
+            const arr = a.img.split(";");
+            arr.splice(arr.length - 1);
+
+            return arr.map((s) => (
               <>
                 <div className="pa">
                   <img src={s} alt="" />
@@ -142,8 +145,8 @@ function AddPozaGalerie() {
                   <button onClick={del(a.id)}>delete</button>
                 </div>
               </>
-            ))
-          )} */}
+            ));
+          })}
         </div>
 
         <div class="form-group">
