@@ -29,7 +29,7 @@ function AddPremiu() {
       data.append("desc", desc);
       data.append("pozeNume", pozeNume);
       axios.post(port + "/admin/addPremiu", data).then((res) => {
-        if (res.data.ok === ok) {
+        if (res.data.ok === true) {
           setOk(true);
         }
       });
