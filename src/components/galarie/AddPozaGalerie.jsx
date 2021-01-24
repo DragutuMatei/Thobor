@@ -80,7 +80,6 @@ function AddPozaGalerie() {
   const del = (id, s) => {
     axios.post(port + "/admin/delImg", { id: id, s: s }).then((r) => {
       setI(r.data);
-      console.log(r.data);
     });
   };
 
