@@ -85,7 +85,7 @@ function Admin() {
       <AddPozaGalerie />
       <hr />
       <AddPremiu />
-      <Premii/>
+      <Premii ok={true} />
       <hr />
     </>
   );

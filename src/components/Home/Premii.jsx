@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import port from "../Port";
 import { CarouselProvider, Slider, Slide, Dot } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+ 
 
-function Premii() {
+function Premii({ ok }) {
   const [premii, setPremii] = useState([]);
   const [height, setHeight] = useState(600);
   const [width, setWidth] = useState(1200);
@@ -32,6 +33,12 @@ function Premii() {
   window.onresize = res;
   window.onload = res;
 
+  const del = (id) => {
+    Axios.post(port + "/admin/deletePremiu", { id: id }).then((res) => {
+      setPremii(res.data);
+    })
+  };
+
   return (
     <>
       <div className="premii">
@@ -54,6 +61,15 @@ function Premii() {
                       <h1>{p.titlu}</h1>
                       <h4>{p.subtitlu}</h4>
                       <p>{p.descriere}</p>
+                      {ok && (
+                        <button
+                          onClick={() => {
+                            del(p.id);
+                          }}
+                        >
+                          Delete
+                        </button>
+                      )}
                     </div>
                   </div>
                 </Slide>
