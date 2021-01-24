@@ -58,6 +58,9 @@ export default function Navabar() {
         setAll("#383a3d");
         setLogin("#17aa4b");
         break;
+      default:
+        setAll("#383a3d");
+        break;
     }
   };
 
@@ -88,7 +91,7 @@ export default function Navabar() {
 
   return (
     <>
-      <div className="navbar">
+      <div className="navbar" style={{ flexWrap: "nowrap" }}>
         <div className="logo">
           <Link to="/#up">
             <img src={require("../assets/logo.png").default} alt="" />
@@ -179,13 +182,13 @@ export default function Navabar() {
                 <div className="link">
                   <a onClick={logout}>logOut</a>
                 </div>
-                {
-                  localStorage.getItem("email") === user.email && 
-                (
+                {localStorage.getItem("email") === user.email && (
                   <div className="link">
-                    <Link to="/fbk/adb/fkajdfbfkjb/adskfbakdfbkdbasf/sakdhvkasdjvsav">Admin</Link>
-                  </div>)
-                }
+                    <Link to="/fbk/adb/fkajdfbfkjb/adskfbakdfbkdbasf/sakdhvkasdjvsav">
+                      Admin
+                    </Link>
+                  </div>
+                )}
               </>
             ) : (
               <div className="link">
@@ -201,16 +204,25 @@ export default function Navabar() {
               </div>
             )}
             <div className="link">
-              <a href="https://www.facebook.com/ThoborCNCH" target="_blank">
+              <a
+                href="https://www.facebook.com/ThoborCNCH"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <i className="fab fa-facebook-f"></i>
               </a>
               <a
                 href="https://www.youtube.com/channel/UCoUzT42Ce6f_11ICDef3svA"
+                rel="noreferrer"
                 target="_blank"
               >
                 <i className="fab fa-youtube"></i>
               </a>
-              <a href="https://www.instagram.com/thoborcnch/" target="_blank">
+              <a
+                href="https://www.instagram.com/thoborcnch/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <i className="fab fa-instagram"></i>
               </a>
             </div>
