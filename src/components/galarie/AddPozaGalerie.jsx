@@ -159,7 +159,12 @@ function AddPozaGalerie() {
                 {i.map((a) => {
                   const arr = a.img.split(";");
 
-                  if (arr[arr.length - 1].charAt(arr[arr.length - 1].length - 1) === ";") {
+                  if (
+                    arr[arr.length - 1].charAt(
+                      arr[arr.length - 1].length - 1
+                    ) === ";"
+                  ) {
+                    console.log("re");
                     arr.splice(arr.length - 1);
                   }
 
