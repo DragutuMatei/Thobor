@@ -8,6 +8,7 @@ import axios from "axios";
 import port from "../components/Port";
 import AddPozaGalerie from "../components/galarie/AddPozaGalerie";
 import AddPremiu from "../components/admin/AddPremiu";
+import Premii from "../components/Home/Premii";
 
 function Admin() {
   const [post, setPost] = useState([]);
@@ -84,6 +85,7 @@ function Admin() {
       <AddPozaGalerie />
       <hr />
       <AddPremiu />
+      <Premii/>
       <hr />
     </>
   );

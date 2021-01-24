@@ -17,7 +17,6 @@ function Premii() {
   useEffect(() => {
     Axios.get(port + "/admin/getPremii").then((res) => {
       setPremii(res.data);
-//       console.log(res.data);
     });
   }, []);
 

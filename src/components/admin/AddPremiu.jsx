@@ -1,31 +1,21 @@
+import axios from "axios";
 import React, { useState } from "react";
+import port from "../Port";
 
 function AddPremiu() {
   const [titlu, setTitlu] = useState("");
+  const [subtitlu, setsubTitlu] = useState("");
   const [desc, setDesc] = useState("");
   const [poze, setPoze] = useState([]);
   const [pozeNume, setPozeNume] = useState("");
   const [ok, setOk] = useState(false);
 
-  const Nume = (a) => {
-    let n = "";
-    for (let i = 0; i < a.length; i++) {
-      n += a[i].name + ";";
-    }
-    n = n.substring(0, n.length - 1);
-    setPozeNume(n.trim());
-  };
-
-  const file = (a) => {
-    let n = [];
-    for (let i = 0; i < a.length; i++) {
-      const reader = new FileReader();
-      reader.readAsDataURL(a[i]);
-      reader.onload = () => {
-        n.push(reader.result);
-      };
-    }
-    setPoze(n);
+  const editFile = (file) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      setPoze(reader.result);
+    };
   };
 
   const submit = () => {
@@ -37,8 +27,14 @@ function AddPremiu() {
         data.append("poze", poze[i]);
       }
       data.append("titlu", titlu);
+      data.append("subtitlu", subtitlu);
       data.append("desc", desc);
       data.append("pozeNume", pozeNume);
+      axios.post(port + "/admin/addPremiu", data).then((res) => {
+        if (res.data.ok === ok) {
+          setOk(true);
+        }
+      });
     }
   };
 
@@ -52,6 +48,16 @@ function AddPremiu() {
           type="text"
           onChange={(e) => {
             setTitlu(e.target.value);
+          }}
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Adauga subtitlu</label>
+        <input
+          className="form-control"
+          type="text"
+          onChange={(e) => {
+            setsubTitlu(e.target.value);
           }}
         />
       </div>
@@ -72,8 +78,8 @@ function AddPremiu() {
           type="file"
           multiple
           onChange={(e) => {
-            file(e.target.files);
-            Nume(e.target.files);
+            setPozeNume(e.target.files[0].name);
+            editFile(e.target.files[0]);
           }}
         />
         <label class="custom-file-label" for="validatedCustomFile">
