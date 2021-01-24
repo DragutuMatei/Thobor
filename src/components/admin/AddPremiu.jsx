@@ -6,7 +6,7 @@ function AddPremiu() {
   const [titlu, setTitlu] = useState("");
   const [subtitlu, setsubTitlu] = useState("");
   const [desc, setDesc] = useState("");
-  const [poze, setPoze] = useState([]);
+  const [poze, setPoze] = useState("");
   const [pozeNume, setPozeNume] = useState("");
   const [ok, setOk] = useState(false);
 
@@ -76,7 +76,6 @@ function AddPremiu() {
           class="custom-file-input"
           id="validatedCustomFile"
           type="file"
-          multiple
           onChange={(e) => {
             setPozeNume(e.target.files[0].name);
             editFile(e.target.files[0]);
