@@ -83,7 +83,7 @@ function AddPozaGalerie() {
       console.log(r.data);
     });
   };
-  
+
   const [clasa, setClasa] = useState("fas fa-caret-right");
   const [color, setColor] = useState("#3d3c3c");
   const [h, setH] = useState("0");
@@ -158,14 +158,22 @@ function AddPozaGalerie() {
               <div className="poze">
                 {i.map((a) => {
                   const arr = a.img.split(";");
-                  arr.splice(arr.length - 1);
+                  if (arr[arr.length - 1] === ";") {
+                    arr.splice(arr.length - 1);
+                  }
 
                   return arr.map((s) => (
                     <>
                       <div className="pa">
                         <img src={s} alt="" />
                         <h1>{a.sezon}</h1>
-                        <button onClick={() => { del(a.id, s) }}>delete</button>
+                        <button
+                          onClick={() => {
+                            del(a.id, s);
+                          }}
+                        >
+                          delete
+                        </button>
                       </div>
                     </>
                   ));
@@ -181,7 +189,7 @@ function AddPozaGalerie() {
             type="text"
             onChange={(e) => {
               setSezon(e.target.value);
-            }}  
+            }}
           />
           <button type="submit" class="btn btn-primary m-2" onClick={addSezon}>
             Add sezon
