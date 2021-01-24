@@ -1,12 +1,7 @@
 import Axios from "axios";
 import React, { useEffect, useState } from "react";
 import port from "../Port";
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  Dot,
-} from "pure-react-carousel";
+import { CarouselProvider, Slider, Slide, Dot } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
 function Premii() {
@@ -54,10 +49,7 @@ function Premii() {
               {premii.map((p) => (
                 <Slide key={p.id} index={p.id}>
                   <div className="premiu">
-                    <img
-                      src={require("../../assets/premii/" + p.poza).default}
-                      alt=""
-                    />
+                    <img src={p.poza} alt="" />
                     <div className="scris">
                       <h1>{p.titlu}</h1>
                       <h4>{p.subtitlu}</h4>
@@ -72,12 +64,6 @@ function Premii() {
                 <Dot className="dot" slide={d.id - 1} key={d.id} />
               ))}
             </div>
-            {/* <ButtonBack className="back">
-              <i className="qode_icon_font_awesome fa fa-arrow-left"></i>
-            </ButtonBack>
-            <ButtonNext className="next">
-              <i className="qode_icon_font_awesome fa fa-arrow-right"></i>
-            </ButtonNext> */}
           </CarouselProvider>
         </div>
       </div>
