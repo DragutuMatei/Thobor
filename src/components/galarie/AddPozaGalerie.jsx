@@ -154,8 +154,7 @@ function AddPozaGalerie() {
             className="hide"
             style={{ height: h, transition: "0.5s ease-in-out" }}
           >
-            <p style={{ margin: 30 }}>
-              <div className="poze">
+              <div style={{ margin: 30 }} className="poze">
                 {i.map((a) => {
                   const arr = a.img.split(";");
 
@@ -180,7 +179,6 @@ function AddPozaGalerie() {
                   ));
                 })}
               </div>
-            </p>
           </div>
         </div>
         <div class="form-group">
