@@ -52,12 +52,10 @@ function AddPozaGalerie() {
   };
 
   const addPozeG = () => {
-    console.log(poze, pozeNume, sezonP);
     if (poze === [] || pozeNume === "" || sezonP === "any") {
       alert("Toate campurile trebuie completate!");
     } else {
       const data = new FormData();
-      console.log(poze);
       for (let i = 0; i < poze.length; i++) {
         data.append("poze", poze[i]);
       }
@@ -98,6 +96,7 @@ function AddPozaGalerie() {
       setH("auto");
     }
   }
+
   return (
     <>
       <div style={{ padding: "0 50px" }}>
