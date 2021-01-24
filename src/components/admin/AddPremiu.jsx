@@ -19,13 +19,11 @@ function AddPremiu() {
   };
 
   const submit = () => {
-    if (poze === [] || pozeNume === "" || titlu === "" || desc === "") {
+    if (poze === "" || pozeNume === "" || titlu === "" || desc === "") {
       alert("Toate campurile trebuie completate!");
     } else {
       const data = new FormData();
-      for (let i = 0; i < poze.length; i++) {
-        data.append("poze", poze[i]);
-      }
+      data.append("poze", poze);
       data.append("titlu", titlu);
       data.append("subtitlu", subtitlu);
       data.append("desc", desc);
