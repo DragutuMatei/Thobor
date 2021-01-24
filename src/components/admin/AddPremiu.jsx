@@ -43,7 +43,7 @@ function AddPremiu() {
   };
 
   return (
-    <div>
+    <div style={{ padding: "0 50px" }}>
       <div class="form-group">
         <h1>Adauga Premiu</h1>
         <label for="exampleInputEmail1">Adauga Titlu</label>
@@ -56,8 +56,7 @@ function AddPremiu() {
         />
       </div>
       <div class="form-group">
-        <h1>Adauga Premiu</h1>
-        <label for="exampleInputEmail1">Adauga Titlu</label>
+        <label for="exampleInputEmail1">Adauga descriere</label>
         <textarea
           className="form-control"
           type="text"
