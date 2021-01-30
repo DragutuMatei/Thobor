@@ -29,9 +29,9 @@ function Membrii(props) {
       <div
         className="fullPage"
         style={{
-          display: ready && "flex",
-          justifyContent: ready && "center",
-          alignItems: ready && "center",
+          display: !ready && "flex",
+          justifyContent: !ready && "center",
+          alignItems: !ready && "center",
         }}
       >
         {ready ? (
