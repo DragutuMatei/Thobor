@@ -3,10 +3,6 @@ import Axios from "axios";
 import port from "../Port";
 function Membrii(props) {
   const [membrii, setMembrii] = useState([]);
-  const [name, setName] = useState("");
-  const [departament, setDepartament] = useState("");
-  const [poza, setPoza] = useState();
-  const [ok, setOk] = useState(false);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
