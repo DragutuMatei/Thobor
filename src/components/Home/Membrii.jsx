@@ -26,7 +26,14 @@ function Membrii(props) {
 
   return (
     <div>
-      <div className="fullPage">
+      <div
+        className="fullPage"
+        style={{
+          display: ready && "flex",
+          justifyContent: ready && "center",
+          alignItems: ready && "center",
+        }}
+      >
         {ready ? (
           <>
             {!props.ok && (
@@ -59,12 +66,12 @@ function Membrii(props) {
               ))}
             </div>
           </>
-        ):(<i
-          style={{ fontSize: 40, color: "#75c60b", marginTop: 30 }}
-          className="fa fa-refresh fa-spin"
-        ></i>)
-      
-      }
+        ) : (
+          <i
+            style={{ fontSize: 100, color: "#75c60b", marginTop: 30 }}
+            className="fa fa-refresh fa-spin"
+          ></i>
+        )}
       </div>
     </div>
   );
