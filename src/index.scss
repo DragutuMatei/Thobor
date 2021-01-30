@@ -648,13 +648,14 @@ html {
     .dots {
       width: 40%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       margin: 50px auto;
 
       .dot {
         width: 15px;
         height: 15px;
+        margin: 10px;
         cursor: pointer;
         background: #8cc640;
         border-radius: 50%;
