@@ -27,7 +27,7 @@ function Membrii(props) {
   return (
     <div>
       <div className="fullPage">
-        {!ready ? (
+        {ready ? (
           <>
             {!props.ok && (
               <div className="title">
