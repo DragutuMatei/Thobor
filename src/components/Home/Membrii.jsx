@@ -7,10 +7,12 @@ function Membrii(props) {
   const [departament, setDepartament] = useState("");
   const [poza, setPoza] = useState();
   const [ok, setOk] = useState(false);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     Axios.get(port + "/admin/getMembers").then((res) => {
       setMembrii(res.data);
+      setReady(true);
     });
   }, []);
 
@@ -22,17 +24,18 @@ function Membrii(props) {
     );
   };
 
-   
   return (
     <div>
       <div className="fullPage">
-        {!props.ok && (
-          <div className="title">
-            <h1>Echipa THOBOR</h1>
-            <h3>Sezonul 2020-2021</h3>
-          </div>
-        )}
-        
+        {!ready ? (
+          <>
+            {!props.ok && (
+              <div className="title">
+                <h1>Echipa THOBOR</h1>
+                <h3>Sezonul 2020-2021</h3>
+              </div>
+            )}
+
             <div className="membrii">
               {membrii.map((membru) => (
                 <div key={membru.id} className="membru">
@@ -55,8 +58,15 @@ function Membrii(props) {
                 </div>
               ))}
             </div>
-          </div>
-        </div> 
+          </>
+        ):(<i
+          style={{ fontSize: 40, color: "#75c60b", marginTop: 30 }}
+          className="fa fa-refresh fa-spin"
+        ></i>)
+      
+      }
+      </div>
+    </div>
   );
 }
 
