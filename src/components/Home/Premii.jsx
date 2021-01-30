@@ -78,7 +78,7 @@ function Premii({ ok }) {
               {premii.map((d) => (
                 <Dot
                   className="dot"
-                  slide={Math.floor(d.id * 0.1)-1}
+                  slide={Math.floor(d.id * 0.1)-2}
                   key={d.id}
                 />
               ))}
