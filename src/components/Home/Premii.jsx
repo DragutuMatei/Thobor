@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import port from "../Port";
 import { CarouselProvider, Slider, Slide, Dot } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
- 
 
 function Premii({ ok }) {
   const [premii, setPremii] = useState([]);
@@ -36,7 +35,7 @@ function Premii({ ok }) {
   const del = (id) => {
     Axios.post(port + "/admin/deletePremiu", { id: id }).then((res) => {
       setPremii(res.data);
-    })
+    });
   };
 
   return (
@@ -77,7 +76,11 @@ function Premii({ ok }) {
             </Slider>
             <div className="dots">
               {premii.map((d) => (
-                <Dot className="dot" slide={d.id - 1} key={d.id} />
+                <Dot
+                  className="dot"
+                  slide={Math.floor(d.id * 0.1)}
+                  key={d.id}
+                />
               ))}
             </div>
           </CarouselProvider>
