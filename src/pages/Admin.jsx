@@ -12,11 +12,13 @@ import Premii from "../components/Home/Premii";
 
 function Admin() {
   const [post, setPost] = useState([]);
+  const [ready, setReady] = useState(false);
 
   useEffect(
     () => {
       axios.get(port + "/getBlogPosts").then((res) => {
         setPost(res.data);
+        setReady(true);
       });
     },
     [
@@ -73,7 +75,7 @@ function Admin() {
             className="hide"
             style={{ height: h, transition: "0.5s ease-in-out" }}
           >
-            <Posts posts={post} ok={true} />
+            <Posts posts={post} ok={true} ready={ready} />
           </div>
         </div>
       </div>
