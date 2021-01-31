@@ -67,7 +67,7 @@ function Admin() {
         <div className="more" width="100%">
           <div className="press" onClick={more}>
             <i className={clasa} style={{ color: color }}></i>
-            <span style={{ color: color }}>Vezi Membrii</span>
+            <span style={{ color: color }}>Vezi Postari</span>
           </div>
           <div
             className="hide"
