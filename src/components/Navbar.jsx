@@ -93,7 +93,12 @@ export default function Navabar() {
     <>
       <div className="navbar" style={{ flexWrap: "nowrap" }}>
         <div className="logo">
-          <Link to="/#up">
+          <Link
+            to="/#up"
+            onClick={() => {
+              col("home");
+            }}
+          >
             <img src={require("../assets/logo.png").default} alt="" />
           </Link>
           <i onClick={downUp} className="fa fa-bars"></i>
