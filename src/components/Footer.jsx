@@ -28,16 +28,25 @@ function Footer() {
             românești.
           </p>
           <div className="linkuri">
-            <a href="https://www.facebook.com/ThoborCNCH" target="_blank">
+            <a
+              href="https://www.facebook.com/ThoborCNCH"
+              rel="noreferrer"
+              target="_blank"
+            >
               <i className="fab fa-facebook-f"></i>
             </a>
             <a
               href="https://www.youtube.com/channel/UCoUzT42Ce6f_11ICDef3svA"
+              rel="noreferrer"
               target="_blank"
             >
               <i className="fab fa-youtube"></i>
             </a>
-            <a href="https://www.instagram.com/thoborcnch/" target="_blank">
+            <a
+              href="https://www.instagram.com/thoborcnch/"
+              rel="noreferrer"
+              target="_blank"
+            >
               <i className="fab fa-instagram"></i>
             </a>
           </div>
@@ -45,11 +54,7 @@ function Footer() {
         <div className="center">
           <h1>Postari Recente</h1>
           {postari.map((p) => (
-            <Link
-              to={"/blog/" + p.titlu}
-            >
-              {p.titlu}
-            </Link>
+            <Link to={"/blog/" + p.titlu}>{p.titlu}</Link>
           ))}
         </div>
         <Ads />
