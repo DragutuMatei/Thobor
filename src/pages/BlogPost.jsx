@@ -71,9 +71,7 @@ function BlogPost({ match }) {
     axios.post(port + "/getCom", { tit: match.params.titlu }).then((res) => {
       setComments(res.data);
     });
-  }, [
-    window.location.href
-  ]);
+  }, [window.location.href]);
 
   return (
     <>
@@ -95,7 +93,7 @@ function BlogPost({ match }) {
           <div className="descr">{desc}</div>
           <div className="fle">
             {img.map((i) => (
-              <Img key={Math.random()} src={i}/>
+              <Img key={Math.random()} src={i} />
             ))}
           </div>
           <div className="coment">

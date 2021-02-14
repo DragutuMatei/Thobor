@@ -8,7 +8,7 @@ function Ads() {
         className="right"
         style={{ width: 300, height: 300 }}
         client="ca-pub-7900802648960033"
-        format=""
+        format="auto"
         slot="8761774704"
       />
     </>

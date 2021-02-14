@@ -79,6 +79,7 @@ function AddPost() {
       });
     }
   };
+  
   const MonthArr = [
     "Ianuarie",
     "Februarie",
