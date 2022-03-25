@@ -35,7 +35,7 @@ function Membrii(props) {
             {!props.ok && (
               <div className="title">
                 <h1>Echipa THOBOR</h1>
-                <h3>Sezonul 2020-2021</h3>
+                <h3>Sezonul 2021-2022</h3>
               </div>
             )}
 
